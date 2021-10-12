@@ -1,0 +1,7 @@
+__pycache__
+*/__pycache__
+*/*/__pychache__
+.ipynb_checkpoints
+.~lock*
+*/.~lock*
+data
