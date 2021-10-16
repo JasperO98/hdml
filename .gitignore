@@ -5,3 +5,4 @@ __pycache__
 .~lock*
 */.~lock*
 data
+catboost_info

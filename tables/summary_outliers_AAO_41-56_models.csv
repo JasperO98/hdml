@@ -1,7 +1,0 @@
-Model,MAE,RMSE,R2
-Random Forest (36-59),5.757,7.520,0.550
-Langbehn refitted (36-59),5.567,7.317,0.574
-Langbehn original (41-56),5.593,7.309,0.575
-Linear Regression (36-40) + Langbehn refitted (41-59),5.476,7.241,0.583
-Langbehn refitted (41-56),5.475,7.241,0.583
-Linear Regression (36-59),5.406,6.989,0.611
