@@ -267,8 +267,8 @@ class PreProcessor:
         # df['hxpacky'] = (df['hxtobcpd'] / 20) * df['hxtobyos']
         df['dbscore'] = df['pbas11sv'] * df['pbas11fr']
         df['manifest'] = (df['hdcat'] == 3).astype(int)
-        df['cUHDRS'] = ((df['tfcscore'] - 10.4 / 1.9 ) - (df['motscore'] - 29.7 / 14.9) + (df['sdmt1'] - 28.4 / 11.3) +
-                        (df['swrt1'] + 66.1 / 20.1)) + 10
+        df['cUHDRS'] = (((df['tfcscore'] - 10.4) / 1.9 ) - ((df['motscore'] - 29.7) / 14.9) + ((df['sdmt1'] - 28.4) / 11.3) +
+                        ((df['swrt1'] + 66.1) / 20.1)) + 10
         df['cogscore2'] = self.calc_cogscore(df)
         # Drop unknowns
         # df = df.drop(['hxalcab_9999.0', 'hxtobab_9999.0', 'hxdrugab_9999.0'], axis='columns')
