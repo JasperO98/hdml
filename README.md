@@ -9,7 +9,7 @@ Open a terminal in directory and enter the following commands:
  conda config --add channels bioconda
  conda create -y -n my_env python=3.8.13
  conda activate my_env
- conda install -y catboost xgboost lightgbm scikit-learn scipy numpy pandas matplotlib seaborn pillow tqdm brotlipy
+ conda install -y catboost xgboost lightgbm scikit-learn scipy numpy pandas matplotlib seaborn pillow tqdm brotlipy jupyter
  conda install -y pydot graphviz
  conda install -y scikit-learn-intelex 
  pip install Flask-SQLAlchemy

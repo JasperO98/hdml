@@ -1,0 +1,6 @@
+layers,bidirect,L2,drop,rdrop,lr,hidden_size/n_filters,format time,train AUC,train Accuracy,train F1,test AUC,test Accuracy,test F1,model
+3,False,1e-07,0.0,0.0,1e-05,256,0h 10m 19s,0.943,0.865,0.836,0.931,0.852,0.817,GRU
+3,False,1e-05,0.0,0.0,1e-05,256,0h 16m 37s,0.945,0.868,0.839,0.931,0.851,0.815,GRU
+3,False,1e-07,0.0,0.0,1e-05,128,0h 5m 16s,0.944,0.867,0.837,0.93,0.852,0.817,GRU
+3,False,1e-05,0.0,0.0,1e-05,128,0h 6m 51s,0.945,0.869,0.839,0.93,0.852,0.817,GRU
+3,False,1e-03,0.0,0.0,1e-05,128,0h 26m 10s,0.949,0.875,0.848,0.927,0.849,0.814,GRU
