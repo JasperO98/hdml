@@ -10,12 +10,6 @@ from models.RNN import RNN
 
 if __name__ == '__main__':
     # Change dir to root
-    # chdir('')
-
-    # Either predict cUHDRS or drive
-    # pred = ['cUHDRS']
-    # prob = ['regression']
-
     pred = ['drive']
     prob = ['classification']
 
