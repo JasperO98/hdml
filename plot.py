@@ -409,7 +409,7 @@ class Plotter:
         if self.save_mode:
             name = '{}_{}_forecasting_{}'.format(subset, label, select)
             num = np.sum(['.'.join(file.split(' ')[:-1]) == name for file in listdir(join(self.outdir, 'figures'))])
-            plt.savefig(join(self.outdir, 'figures', '{} ({}).pdf'.format(name, num)), format='pdf', dpi=300)
+            plt.savefig(join(self.outdir, 'figures', '{} ({}).pdf'.format(name, num)), format='pdf', dpi=300, bbox_inches="tight", pad_inches=0)
         if self.show_mode:
             plt.show()
         plt.close()
@@ -462,7 +462,7 @@ class Plotter:
         plt.ylabel('True Positive Rate (Sensitivity)')
         plt.tight_layout()
         if self.save_mode:
-            plt.savefig(join(self.outdir, 'figures', label + '_roc_curve.pdf'), dpi=300)
+            plt.savefig(join(self.outdir, 'figures', label + '_roc_curve.pdf'), dpi=300, bbox_inches="tight", pad_inches=0)
         if self.show_mode:
             plt.show()
         plt.close()
