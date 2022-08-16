@@ -274,8 +274,8 @@ class PreProcessor:
         # df = df.drop(['hxalcab_9999.0', 'hxtobab_9999.0', 'hxdrugab_9999.0'], axis='columns')
 
         # Define longitudinal columns
-        long_cols = self.check(df, ['age', 'hddiagn', 'parentagesx', 'ccmtrage', 'sxsubj', 'sxfam', 'ccdepage', 'ccirbage', 'ccvabage',
-                     'ccaptage', 'ccpobage', 'ccpsyage', 'cccogage', 'rtrddur',
+        long_cols = self.check(df, ['age', 'hddiagn', 'parentagesx', 'ccmtrage', 'sxsubj', 'sxfam', 'rtrddur', 'cccogage',
+                     # 'ccdepage', 'ccirbage', 'ccvabage', 'ccaptage', 'ccpobage', 'ccpsyage',
                      'bmi', 'alcunits', 'tobcpd', 'tobyos', 'packy', 'cafab', 'cafpd', 'drugab',
                      # var items II
                      'manifest',
