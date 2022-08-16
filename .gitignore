@@ -3,7 +3,6 @@ __pycache__
 */*/__pychache__
 .ipynb_checkpoints
 .idea
-.vscode
 .~lock*
 */.~lock*
 data
