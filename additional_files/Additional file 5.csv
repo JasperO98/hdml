@@ -1,0 +1,154 @@
+variable,model,round,problem,score
+hxtrqfrq,Linear,2,Ordinal Regression,1.0
+pbas10fr,Linear,2,Ordinal Regression,0.99
+outscore,Linear,2,Regression,0.99
+pbas10sv,Linear,2,Ordinal Regression,0.99
+sxsubj,RF,2,Regression,0.99
+hxritfrq,Linear,2,Ordinal Regression,0.98
+sxfam,RF,2,Regression,0.98
+hxinhfrq,Linear,2,Ordinal Regression,0.98
+trnchair,RF,2,Classification,0.98
+pbas9fr,Linear,2,Ordinal Regression,0.98
+ccmtrage,RF,2,Regression,0.98
+toilet,RF,2,Classification,0.97
+cccogage,RF,2,Regression,0.97
+hxopifrq,Linear,2,Ordinal Regression,0.97
+pbas2sv,RF,2,Ordinal Regression,0.96
+bed,RF,2,Classification,0.95
+hxbarfrq,Linear,2,Ordinal Regression,0.95
+carehome,RF,2,Classification,0.95
+comb,RF,2,Classification,0.94
+walkhelp,RF,2,Classification,0.94
+bathe,RF,2,Classification,0.94
+feedself,RF,2,Classification,0.94
+dress,RF,2,Classification,0.94
+hxhalfrq,RF,2,Ordinal Regression,0.93
+walkfall,RF,2,Classification,0.93
+emplusl,RF,2,Classification,0.92
+telephon,RF,2,Classification,0.92
+chorlle,Linear,2,Ordinal Regression,0.92
+dystrle,Linear,2,Ordinal Regression,0.92
+hxclbfrq,RF,2,Ordinal Regression,0.92
+walknbr,RF,2,Classification,0.92
+pbas9sv,Linear,2,Ordinal Regression,0.91
+emplany,RF,2,Classification,0.91
+chorrue,Linear,2,Ordinal Regression,0.91
+hxpakfrq,Linear,2,Ordinal Regression,0.9
+cash,RF,2,Classification,0.9
+ownmeds,RF,2,Classification,0.9
+grocery,RF,2,Classification,0.9
+prepmeal,RF,2,Classification,0.9
+pubtrans,RF,2,Classification,0.9
+parentagesx,RF,2,Regression,0.89
+laundry,RF,2,Classification,0.89
+pbas2fr,RF,1,Ordinal Regression,0.89
+carelevl,RF,2,Ordinal Regression,0.89
+housewrk,RF,2,Classification,0.89
+hxampfrq,RF,2,Ordinal Regression,0.88
+pbas8fr,Linear,2,Ordinal Regression,0.88
+volunt,RF,2,Classification,0.88
+diagconf,RF,2,Ordinal Regression,0.88
+supchild,RF,2,Classification,0.87
+drive,RF,2,Classification,0.87
+hxcocfrq,RF,2,Ordinal Regression,0.87
+fafinan,RF,2,Classification,0.87
+sacvelv,Linear,2,Ordinal Regression,0.86
+hxherfrq,Linear,2,Ordinal Regression,0.85
+sacinith,RF,2,Ordinal Regression,0.85
+pbas5sv,RF,2,Ordinal Regression,0.85
+pbas11fr,Linear,2,Ordinal Regression,0.84
+tobyos,RF,2,Regression,0.84
+dystrue,RF,2,Ordinal Regression,0.83
+hxmarfrq,RF,2,Ordinal Regression,0.83
+chores,RF,2,Ordinal Regression,0.82
+rigarmr,RF,2,Ordinal Regression,0.82
+scnt1,RF,2,Regression,0.82
+mh,RF,2,Regression,0.81
+occupatn,RF,2,Ordinal Regression,0.8
+ocularv,RF,2,Ordinal Regression,0.79
+re,RF,2,Regression,0.79
+inwscore,RF,2,Regression,0.78
+pbas7fr,Linear,2,Ordinal Regression,0.78
+ampfrq,RF,2,Ordinal Regression,0.77
+adl,RF,2,Ordinal Regression,0.77
+pbas1fr,Linear,2,Ordinal Regression,0.77
+pbas4fr,Linear,2,Ordinal Regression,0.76
+finances,RF,2,Ordinal Regression,0.76
+bp,RF,2,Regression,0.76
+sit1,RF,2,Regression,0.75
+prosupl,RF,2,Ordinal Regression,0.75
+fingtapr,RF,2,Ordinal Regression,0.75
+pbas6fr,Linear,2,Ordinal Regression,0.74
+mcs,Linear,2,Regression,0.74
+pbas3fr,Linear,2,Ordinal Regression,0.73
+hxtobyos,RF,2,Regression,0.73
+hxtobcpd,RF,2,Regression,0.73
+clbfrq,Linear,2,Ordinal Regression,0.73
+trla1,RF,2,Regression,0.73
+pcs,RF,2,Regression,0.73
+sf,RF,2,Regression,0.73
+swrt1,RF,2,Regression,0.73
+sdmt1,RF,2,Regression,0.72
+trlb2,RF,2,Regression,0.71
+trlb1,RF,2,Regression,0.69
+verfct5,RF,2,Regression,0.69
+gait,RF,2,Ordinal Regression,0.68
+mmsetotal,RF,2,Regression,0.68
+pbas11sv,RF,2,Ordinal Regression,0.68
+dystlue,RF,2,Ordinal Regression,0.68
+pbas8sv,RF,2,Ordinal Regression,0.67
+verflt05,RF,2,Regression,0.66
+trla2,RF,2,Regression,0.66
+dysarth,RF,2,Ordinal Regression,0.66
+dysttrnk,RF,2,Ordinal Regression,0.64
+rp,RF,2,Regression,0.64
+dystlle,RF,2,Ordinal Regression,0.64
+chorbol,RF,2,Ordinal Regression,0.64
+pbas5fr,RF,2,Ordinal Regression,0.63
+vt,RF,2,Regression,0.63
+fingtapl,RF,2,Ordinal Regression,0.62
+sacinitv,RF,2,Ordinal Regression,0.61
+chorrle,RF,2,Ordinal Regression,0.61
+anxscore,Linear,2,Regression,0.61
+retropls,RF,2,Ordinal Regression,0.6
+ocularh,RF,2,Ordinal Regression,0.6
+chortrnk,RF,2,Ordinal Regression,0.58
+prosupr,RF,2,Ordinal Regression,0.58
+tobcpd,RF,2,Regression,0.58
+tandem,RF,2,Ordinal Regression,0.57
+brady,RF,2,Ordinal Regression,0.56
+sacvelh,RF,2,Ordinal Regression,0.55
+tongue,RF,2,Ordinal Regression,0.54
+rigarml,RF,2,Ordinal Regression,0.54
+chorface,RF,2,Ordinal Regression,0.54
+pbas4sv,RF,2,Ordinal Regression,0.54
+gh,RF,2,Regression,0.52
+marfrq,RF,2,Ordinal Regression,0.51
+pbas7sv,RF,2,Ordinal Regression,0.5
+hads_depscore,RF,2,Regression,0.48
+chorlue,RF,2,Ordinal Regression,0.48
+pbas6sv,RF,1,Ordinal Regression,0.45
+cocfrq,Linear,1,Ordinal Regression,0.45
+luria,Knn,2,Ordinal Regression,0.44
+pbas1sv,RF,2,Ordinal Regression,0.44
+pf,RF,2,Regression,0.44
+indepscl,RF,2,Ordinal Regression,0.43
+pbas3sv,Linear,2,Ordinal Regression,0.42
+irrscore,RF,2,Regression,0.41
+scst1,RF,1,Regression,0.37
+alcunits,RF,1,Regression,0.3
+trlb3,RF,2,Regression,0.21
+tug1,Linear,2,Regression,0.12
+swrt2,Linear,2,Regression,0.11
+trla3,Linear,2,Regression,0.1
+sit2,Linear,2,Regression,0.09
+verflt07,RF,1,Regression,0.09
+scnt3,Linear,2,Regression,0.09
+verfct7,Linear,2,Regression,0.08
+scnt2,Linear,2,Regression,0.05
+sit3,RF,2,Regression,0.04
+sdmt2,RF,2,Regression,0.03
+verflt06,Linear,2,Regression,0.01
+updfh,Linear,1,Regression,-0.0
+swrt3,RF,2,Regression,-0.0
+verfct6,Linear,1,Regression,-0.01

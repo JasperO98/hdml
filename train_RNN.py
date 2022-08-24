@@ -51,10 +51,7 @@ if __name__ == '__main__':
 
     plotter.forecasting_measures(subset='test', label='drive')
     # Make plots
-    if pred[0] == 'drive':
-        plotter.roc(label='drive', subset='test')
-        plotter.confusion_matrix(subset='test', label='drive')
-        for i in range(30):
-            plotter.forecasting_plot(subset='test', label='drive', select='change', complete=True)
-    else:
-        plotter.ae_distribution('test', pred[0])
+    plotter.roc(label='drive', subset='test')
+    plotter.confusion_matrix(subset='test', label='drive')
+    for i in range(100):
+        plotter.forecasting_plot(subset='test', label='drive', select='change', complete=True)

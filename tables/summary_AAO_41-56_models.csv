@@ -1,11 +1,11 @@
 Model,MAE,RMSE,R2
+KNN,6.181,8.113,0.447
+Random Forest,5.850,7.631,0.510
+Linear SVM,5.675,7.354,0.545
 Langbehn original,5.572,7.226,0.561
+XGBoost,5.479,7.146,0.571
+MLP,5.464,7.139,0.571
 Langbehn refitted,5.375,7.085,0.578
-KNN,3.334,4.471,0.832
-Random Forest,3.254,4.313,0.844
-XGBoost,3.156,4.233,0.849
-Linear SVM,3.027,4.200,0.852
-MLP,3.167,4.180,0.853
-Linear Regression,3.090,4.073,0.861
-CatBoost,3.036,4.060,0.861
-LGBM,3.021,4.042,0.863
+Linear Regression,5.454,7.070,0.580
+CatBoost,5.285,6.907,0.599
+LGBM,5.261,6.872,0.603

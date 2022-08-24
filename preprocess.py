@@ -265,16 +265,18 @@ class PreProcessor:
         # Recalculate packy, hxpacky, and cUHDRS
         # df['packy'] = (df['tobcpd'] / 20) * df['tobyos']
         # df['hxpacky'] = (df['hxtobcpd'] / 20) * df['hxtobyos']
-        df['dbscore'] = df['pbas11sv'] * df['pbas11fr']
+        
+        # df['dbscore'] = df['pbas11sv'] * df['pbas11fr']
         df['manifest'] = (df['hdcat'] == 3).astype(int)
-        df['cUHDRS'] = (((df['tfcscore'] - 10.4) / 1.9 ) - ((df['motscore'] - 29.7) / 14.9) + ((df['sdmt1'] - 28.4) / 11.3) +
-                        ((df['swrt1'] + 66.1) / 20.1)) + 10
-        df['cogscore2'] = self.calc_cogscore(df)
+        # df['cUHDRS'] = (((df['tfcscore'] - 10.4) / 1.9 ) - ((df['motscore'] - 29.7) / 14.9) + ((df['sdmt1'] - 28.4) / 11.3) +
+        #                 ((df['swrt1'] + 66.1) / 20.1)) + 10
+        # df['cogscore2'] = self.calc_cogscore(df)
+
         # Drop unknowns
         # df = df.drop(['hxalcab_9999.0', 'hxtobab_9999.0', 'hxdrugab_9999.0'], axis='columns')
 
         # Define longitudinal columns
-        long_cols = self.check(df, ['age', 'hddiagn', 'parentagesx', 'ccmtrage', 'sxsubj', 'sxfam', 'rtrddur', 'cccogage',
+        long_cols = self.check(df, ['age', 'hddiagn', 'parentagesx', 'ccmtrage', 'sxsubj', 'sxfam', 'cccogage',
                      # 'ccdepage', 'ccirbage', 'ccvabage', 'ccaptage', 'ccpobage', 'ccpsyage',
                      'bmi', 'alcunits', 'tobcpd', 'tobyos', 'packy', 'cafab', 'cafpd', 'drugab',
                      # var items II
@@ -301,14 +303,15 @@ class PreProcessor:
                      # Cognitive score
                      # 'cogscore', 'verfct5', 'trla1', 'trlb1',  # Some
                      # 'cogscore1', 'verfct5', 'trla1', 'trlb1',  # Some
-                     'cogscore2', 'sdmt1', 'verfct5', 'scnt1', 'swrt1', 'sit1', 'trla1', 'trlb1', 'verflt05',  # All
+                     # 'cogscore2', # Cogscore2
+                     'sdmt1', 'verfct5', 'scnt1', 'swrt1', 'sit1', 'trla1', 'trlb1', 'verflt05',  # All
                      'tug1', 'scst1',  # physiotherapy
                      'mmsetotal',  # Mini mental state
-                     'depscore', 'irascore', 'psyscore', 'aptscore', 'exfscore', 'dbscore',  # pba
+                     'depscore', 'irascore', 'psyscore', 'aptscore', 'exfscore', # 'dbscore',  # pba
                      'pf', 'rp', 'bp', 'gh', 'vt', 'sf', 're', 'mh', 'pcs', 'mcs',  # SF-12
                      'anxscore', 'hads_depscore', 'irrscore', 'outscore', 'inwscore',  # HADS-SIS
                      # 'wpaiscr1', 'wpaiscr2', 'wpaiscr3', 'wpaiscr4',  # WPAI‐SHP # ===>MISSING<===
-                     'cUHDRS',
+                     # 'cUHDRS',
                      ])
         # Select constant columns
         const_cols = self.check(df, ['sex', 'handed', # race and handed
