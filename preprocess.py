@@ -231,23 +231,6 @@ class PreProcessor:
             df_in = df_in.drop(missing_cols, axis=1).join(dummies)
         return df_in
 
-    @staticmethod
-    def calc_cogscore(df_in):
-        # Features to combine using PCA
-        cog_cols = ['sdmt1', 'verfct5', 'scnt1', 'swrt1', 'sit1', 'trla1', 'trlb1', 'verflt05']
-        # Which rows will be used to do PCA on, non can be missing
-        missing_rows = df_in[cog_cols].isnull().any(1).values
-        # New feature array
-        new_f = np.full(missing_rows.shape, np.nan)
-        # Do Standard Scaling and PCA on non-missing rows and selected columns
-        pca = PCA(n_components=len(cog_cols), random_state=0)
-        # Save Principal components
-        pcs = pca.fit_transform(StandardScaler().fit_transform(df_in.loc[~missing_rows, cog_cols].values))
-        # Only take the first Principal component (71% of explained variance)
-        new_f[~missing_rows] = pcs[:, 0]
-        # Return feature
-        return new_f
-
     def proces_csv(self, csv, size, thresh, outliers):
         """
         :param csv: Input file (imputed or pre-imputed dataset)
@@ -262,18 +245,8 @@ class PreProcessor:
         df = pd.read_csv(csv)
         # Create dummies
         df = self.replace_dummies(df)
-        # Recalculate packy, hxpacky, and cUHDRS
-        # df['packy'] = (df['tobcpd'] / 20) * df['tobyos']
-        # df['hxpacky'] = (df['hxtobcpd'] / 20) * df['hxtobyos']
         
-        # df['dbscore'] = df['pbas11sv'] * df['pbas11fr']
         df['manifest'] = (df['hdcat'] == 3).astype(int)
-        # df['cUHDRS'] = (((df['tfcscore'] - 10.4) / 1.9 ) - ((df['motscore'] - 29.7) / 14.9) + ((df['sdmt1'] - 28.4) / 11.3) +
-        #                 ((df['swrt1'] + 66.1) / 20.1)) + 10
-        # df['cogscore2'] = self.calc_cogscore(df)
-
-        # Drop unknowns
-        # df = df.drop(['hxalcab_9999.0', 'hxtobab_9999.0', 'hxdrugab_9999.0'], axis='columns')
 
         # Define longitudinal columns
         long_cols = self.check(df, ['age', 'hddiagn', 'parentagesx', 'ccmtrage', 'sxsubj', 'sxfam', 'cccogage',
