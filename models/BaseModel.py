@@ -115,7 +115,7 @@ class Base:
         Depends on how many different labels the model should predict
         """
         pred = self.model.predict(x)
-        shape = (x.shape[0], -1, 1)
+        shape = (x.shape[0], -1, self.data.cons_t)
         if isinstance(pred, list):
             return [p.reshape(shape) for p in pred]
         else:

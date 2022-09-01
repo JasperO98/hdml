@@ -4,7 +4,7 @@ from os import mkdir, listdir
 
 # Seeds
 from os import environ
-from random import seed as rseed
+from random import sample, seed as rseed
 
 # Array manipulations
 import numpy as np
@@ -280,6 +280,50 @@ class Plotter:
             plt.show()
         plt.close()
         return df
+    
+    def consecutive_measures(self, subset, label):
+        """
+        Calculate the measures at each timestep in subset (train or test) of the given label
+        :return: dataframe of evaluation metrics, used in plot_tuning.ipynb
+        """
+        assert label in self.data.labels, '{} is not a label predicted by the model'.format(label)
+        assert subset in ['train', 'test'], 'subset must equal {} or {}, not: {}'.format('train', 'test', subset)
+        problem = self.data.problem[self.data.labels == label]
+        cols = []
+        if problem == 'classification':
+            cols = ['AUC', 'Accuracy', 'F1']
+        elif problem == 'regression':
+            cols = ['MAE', 'RMSE', 'Max AE', 'R2']
+
+        # Get plot vars
+        mask, weights, y_pred, y_true = self.plot_vars[subset][label]
+        values = []
+        # Calculate measures at each time step
+        for ct in range(weights.shape[2]):
+            if weights[:, :, ct].sum() != 0:
+                measures = self.model.evaluate(y_true[:, :, ct], y_pred[:, :, ct], problem, label, weights[:, :, ct])
+                # n = np.sum(~np.isnan(y_true[:, t, s].reshape(-1)))
+                n = np.sum(mask[:, :, ct].reshape(-1))
+                for c, m in zip(cols, measures):
+                    values.append([n, ct, '{:d} (n={:d})'.format(ct + 1, n), c, m])
+        # plot
+        df = pd.DataFrame(values, columns=['n', 'consecutive time step (ct)', 'xlabel', 'measure', 'value'])
+        # Plot
+        g = sns.catplot(x="xlabel", y="value", hue="consecutive time step (ct)", col='measure', data=df, kind="bar",
+                        col_wrap=3 if problem == 'classification' else 2, sharey=False)
+        g.tight_layout()
+        if self.save_mode:
+            g.savefig(join(self.outdir, 'figures', '{}_{}_consecutive_measures.png'.format(subset, label)))
+            # Save as csv
+            flat_df = df.pivot(index=['n', 'consecutive time step (ct)'], columns=['measure'], values=['value'])
+            flat_df.columns = flat_df.columns.get_level_values(1)
+            flat_df = flat_df.reset_index()
+            flat_df.to_csv(join(self.outdir, 'tables', '{}_{}_consecutive_measures.csv'.format(subset, label)),
+                           index=False)
+        if self.show_mode:
+            plt.show()
+        plt.close()
+        return df
 
     def select_from_sample(self, select, complete, y):
         """
@@ -329,15 +373,16 @@ class Plotter:
         accuracies[-1] = accuracies[-2]
 
         # Plot
-        hm = ax.imshow(accuracies, alpha=0.6, extent=[-0.03, self.data.timesteps - 1 + .03, -0.1, 1.1],
+        hm = ax.imshow(accuracies, alpha=0.6, extent=[-0.03, self.data.timesteps + self.data.cons_t - 2 + .03, -0.1, 1.1],
                        cmap=sns.color_palette("Greens", as_cmap=True),
                        origin='lower', aspect='auto')
         fig.colorbar(hm, ax=ax, label='Accuracy')
         ax.set_yticks(np.arange(0.0, 1.1, 0.1).round(1))
         ax.set_yticklabels(np.arange(0.0, 1.1, 0.1).round(1))
-        ax.set_xticks(range(self.data.timesteps))
-        ax.set_xticklabels(range(self.data.timesteps))
-        ax.set_xlim(-.03, self.data.timesteps - 1 + .03)
+        xticks = range(self.data.timesteps + self.data.cons_t - 1)
+        ax.set_xticks(xticks)
+        ax.set_xticklabels(xticks)
+        ax.set_xlim(-.03, self.data.timesteps + self.data.cons_t - 2 + .03)
         ax.set_ylim(-.03, 1.03)
 
     def forecasting_plot(self, subset, label, select='any', complete=True):
@@ -371,7 +416,7 @@ class Plotter:
         x = x[sample_idx]
 
         # Get the true and predicted label
-        y_pred_idx = self.model.custom_predict(x.reshape((1, -1, len(self.data.cols))))[label_idx].reshape(-1)
+        y_pred_idx = self.model.custom_predict(x.reshape((1, -1, len(self.data.cols))))[label_idx][0]
         y_true_idx = x[:, self.data.cols == label].reshape(-1).copy()
         y_true_idx[y_true_idx == self.data.mask] = np.nan
         y_true_idx = self.data.inverse_transform(y_true_idx, label, metric=False).reshape(-1)
@@ -381,29 +426,41 @@ class Plotter:
         cols = ['time step (t)', 'type', label]
         values = []
         for t in range(self.data.timesteps + self.data.shift):
-            values.append([str(t), 'Ground Truth', y_true_idx[t]])
-            values.append([str(t + self.data.shift), 'Predicted', y_pred_idx[t]])
-
+            values.append([str(t), 'Clinical\nAssessment', y_true_idx[t]])
+            values.append([str(t + self.data.shift), 'Model\nAssessment', y_pred_idx[t, 0]])
+            # if self.data.cons_t == 2:
+            #     values.append([str(t + self.data.shift + 1), 'Model Future\nPrediction', y_pred_idx[t, 1]])
+        
+        if self.data.cons_t == 2:
+            values.append([str(self.data.timesteps - 1 + self.data.shift), 'Model Future\nPrediction', y_pred_idx[-1, 0]])
+            values.append([str(self.data.timesteps + self.data.shift), 'Model Future\nPrediction', y_pred_idx[-1, 1]])
         # Plot
         fig, ax = plt.subplots(1, figsize=(17*cm, 9*cm))
         if problem == 'classification':
             # Threshold
             optimal_threshold = 0.5
             ax.axhline(y=optimal_threshold, color="black", dashes=(2, 1),
-                       label='Classification Threshold ({:.3f})'.format(optimal_threshold))
+                       label='Advisory\nThreshold ({:.1f})'.format(optimal_threshold))
             # Heatmap
             self.accuracy_overlay(label, subset, fig, ax)
 
         df = pd.DataFrame(values, columns=cols)
-        truth = df.loc[df['type'] == 'Ground Truth']
-        pred = df.loc[df['type'] == 'Predicted']
-        ax.plot(truth['time step (t)'], truth[label], label='Ground Truth', marker='o')
-        ax.plot(pred['time step (t)'], pred[label], label='Predicted', marker='o')
+        truth = df.loc[df['type'] == 'Clinical\nAssessment']
+        ax.plot(truth['time step (t)'], truth[label], label='Clinical\nAssessment', marker='o')
+                 
+        pred = df.loc[df['type'] == 'Model\nAssessment']
+        ax.plot(pred['time step (t)'], pred[label], label='Model\nAssessment', marker='o')
+        if self.data.cons_t == 2:
+            pred = df.loc[df['type'] == 'Model Future\nPrediction']
+            ax.plot(pred['time step (t)'], pred[label], label='Model Future\nPrediction', color='C1', linestyle='--')
 
         # Legend
         ax.set_xlabel('Visits / Time Points (t)')
         ax.set_ylabel(label)
-        ax.legend(loc='upper center', bbox_to_anchor=(0.5, 1.2), ncol=3)
+        xticklabels = ax.get_xticks().astype(str)
+        xticklabels[-1] += '*'
+        ax.set_xticklabels(xticklabels)
+        ax.legend(loc='upper center', bbox_to_anchor=(0.5, 1.2), ncol=4, fontsize=8)
         plt.tight_layout()
         # Save plot
         if self.save_mode:

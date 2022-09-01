@@ -57,7 +57,7 @@ if __name__ == '__main__':
                         mask_value=-2.0,
                         mask_file='data/filtered_pre_and_manifest.csv',
                         timestep_size=365, max_timestep=5, filt_outliers=False, predict_ml=False,
-                        labels=pred, problem=prob, mask_label=True, shift=0, scaler_type='norm')
+                        labels=pred, problem=prob, mask_label=True, shift=0, cons_t=2, scaler_type='norm')
 
     # Tune RNN
     rnn, train_args, parameters, parameters_names = RNN_args()

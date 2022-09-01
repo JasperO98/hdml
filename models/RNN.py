@@ -97,7 +97,7 @@ class RNN(Base):
         If the model is loaded the given training parameters are ignored.
         """
         super().__init__(data, outdir, load_from_dir, prefix=recurrent_layer.__name__ + '_')
-
+        
         # Load arguments from file if model is loaded
         if load_from_dir:
             print('Overwriting training params')
@@ -277,7 +277,7 @@ class RNN(Base):
         out = []
         wmetrics = {}
         losses = {}
-        output_config = Dense(1, activation='linear', kernel_regularizer=l2(self.L2)).get_config()
+        output_config = Dense(self.data.cons_t, activation='linear', kernel_regularizer=l2(self.L2)).get_config()
         for l in range(len(self.data.labels)):
             # Regression output
             if self.data.problem[l] == 'regression':
@@ -301,7 +301,8 @@ class RNN(Base):
                 ]
                 losses[self.data.labels[l]] = 'binary_crossentropy'
             # Add output layer
-            out_layer = TimeDistributed(Dense.from_config(output_config), name=self.data.labels[l])(network[-1])
+            out_layer = TimeDistributed(Dense.from_config(output_config))(network[-1])
+            out_layer = Reshape((-1, 1), name=self.data.labels[l])(out_layer)
             out.append(out_layer)
 
         # Output shape needs to be 2d
@@ -355,7 +356,7 @@ class RNN(Base):
         losses = {}
         for l in range(len(self.data.labels)):
             if self.data.problem[l] == 'regression':
-                out_layer = TimeDistributed(Dense(1, activation='linear', kernel_regularizer=l2(self.L2)))(network[-1])
+                out_layer = TimeDistributed(Dense(self.data.cons_t, activation='linear', kernel_regularizer=l2(self.L2)))(network[-1])
                 out.append(Reshape((timesteps,), name=self.data.labels[l])(out_layer))
                 wmetrics[self.data.labels[l]] = [
                     RootMeanSquaredError(
@@ -364,7 +365,7 @@ class RNN(Base):
                 ]
                 losses[self.data.labels[l]] = 'mean_squared_error'
             elif self.data.problem[l] == 'classification':
-                out_layer = TimeDistributed(Dense(1, activation='sigmoid', kernel_regularizer=l2(self.L2)))(network[-1])
+                out_layer = TimeDistributed(Dense(self.data.cons_t, activation='sigmoid', kernel_regularizer=l2(self.L2)))(network[-1])
                 out.append(Reshape((timesteps,), name=self.data.labels[l])(out_layer))
                 wmetrics[self.data.labels[l]] = [
                     BinaryAccuracy(

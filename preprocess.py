@@ -17,7 +17,7 @@ import seaborn as sns
 
 class PreProcessor:
     def __init__(self, infile, mask_file, outdir, mask_value, timestep_size=365, max_timestep=5, filt_outliers=False,
-                 labels=None, problem=None, mask_label=False, predict_ml=False, shift=1, scaler_type='norm'):
+                 labels=None, problem=None, mask_label=False, predict_ml=False, shift=1, cons_t=1, scaler_type='norm'):
         """
         :param infile: What data to pre-process, generally data/imputed/PDS5_IRP.csv
         :param mask_file: What data to use as a masking file for the labels, generally data/pre-processed/PDS5_IRP.csv
@@ -34,6 +34,7 @@ class PreProcessor:
         :param predict_ml: Whether to predict as a RNN model or not. When True the samples are duplicated to allow
                            longitudinal predictions.
         :param shift: Whether to predict the current (0) or next visit (1).
+        :param cons_t: Consecutive timesteps to predict
         :param scaler_type: standardization (stand) or normalization (norm). (default=norm)
         """
         # Assertions
@@ -59,6 +60,7 @@ class PreProcessor:
         self.labels = np.array(labels)
         self.problem = np.array(problem)
         self.predict_ml = predict_ml
+        self.cons_t = cons_t
 
         # Use appropriate scales
         self.scaler_type = scaler_type
@@ -476,7 +478,6 @@ class PreProcessor:
         original_y = {}
         original_x = x.copy()
         last_visit = self.calc_last_visit(x)
-
         for lab in self.labels:
             if self.predict_ml:
                 # The label is at the last visit of the input, see mask_samples()
@@ -486,8 +487,25 @@ class PreProcessor:
                 original_y[lab] = x[:, :, self.cols == lab].reshape((x.shape[0], -1, 1)).copy()
             else:
                 # The labels are taken from each visit
-                y[lab] = x[:, self.shift:, self.cols == lab].reshape((x.shape[0], -1, 1)).copy()
-                y_mask[lab] = x_mask[:, self.shift:, self.cols == lab].reshape((x.shape[0], -1, 1)).copy()
+                # y[lab] = x[:, self.shift:, self.cols == lab].reshape((x.shape[0], -1, 1)).copy()
+                # y_mask[lab] = x_mask[:, self.shift:, self.cols == lab].reshape((x.shape[0], -1, 1)).copy()
+
+                # Fill up with nan, if not all values are overwritten it will raise an error with training
+                y[lab] = np.full((x.shape[0], x.shape[1] - self.shift, self.cons_t), np.nan)
+                y_mask[lab] = np.full((x.shape[0], x.shape[1] - self.shift, self.cons_t), np.nan)
+                for i in range(self.shift, x.shape[1]):
+                    # x
+                    lab_values = x[:, i:i+self.cons_t, np.argmax(self.cols == lab)]
+                    lab_values = np.pad(lab_values, mode='constant', constant_values=self.mask,
+                                        pad_width=((0, 0), (0, self.cons_t - max(0, lab_values.shape[-1])))
+                                        )
+                    y[lab][:, i-self.shift] = lab_values
+                    # mask
+                    lab_mask_values = x_mask[:, i:i+self.cons_t, np.argmax(self.cols == lab)]
+                    lab_mask_values = np.pad(lab_mask_values, mode='constant', constant_values=self.mask,
+                                             pad_width=((0, 0), (0, self.cons_t - max(0, lab_mask_values.shape[-1])))
+                                             )
+                    y_mask[lab][:, i-self.shift] = lab_mask_values
                 # Simply take all labels from each time steps
                 original_y[lab] = x[:, :, self.cols == lab].reshape((x.shape[0], -1, 1)).copy()
 

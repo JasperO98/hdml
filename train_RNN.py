@@ -19,18 +19,18 @@ if __name__ == '__main__':
         mkdir(out)
 
     # How to load model from directory
-    load_from_dir = False
+    load_from_dir = True
 
     # Give complete path of models to load
     if load_from_dir:
-        out = join('output', 'drive', 'GRU_RNN', 'model_0')
+        out = join('output', 'drive', 'GRU_RNN', 'model_20')
 
     # Load data, depends on output and model
     data = PreProcessor(infile='data/imputed_pre_and_manifest.csv', outdir='output/figures',
                         mask_value=-2.0,
                         mask_file='data/filtered_pre_and_manifest.csv',
                         timestep_size=365, max_timestep=5, filt_outliers=False, predict_ml=False,
-                        labels=pred, problem=prob, mask_label=True, shift=0, scaler_type='norm')
+                        labels=pred, problem=prob, mask_label=True, shift=0, cons_t=2, scaler_type='norm')
 
     # Loading training arguments
     if load_from_dir:
@@ -50,8 +50,9 @@ if __name__ == '__main__':
     plotter = Plotter(data=data, model=model, outdir=model.outdir, save_mode=True, show_mode=False)
 
     plotter.forecasting_measures(subset='test', label='drive')
+    plotter.consecutive_measures(subset='test', label='drive')
     # Make plots
     plotter.roc(label='drive', subset='test')
     plotter.confusion_matrix(subset='test', label='drive')
-    for i in range(100):
+    for i in range(20):
         plotter.forecasting_plot(subset='test', label='drive', select='change', complete=True)
