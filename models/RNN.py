@@ -322,8 +322,6 @@ class RNN(Base):
         """
         # Add to notebook
         print('Building SHAP model...')
-        # Number of features depends on wether or not the label is added as an input value
-        # features = len(self.cols) if self.mask_label else len(self.cols) - 1
 
         # If shap input size needs to be known
         inp = Input(shape=(timesteps, len(self.data.cols)))  # , batch_size=None if train else 1)

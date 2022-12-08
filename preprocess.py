@@ -393,7 +393,6 @@ class PreProcessor:
                 xi = x[i].copy()
                 xi[~p] = np.nan
                 masked_x.append(xi)
-        # masked_x = [x[i].copy() * placeholders for i in range(x.shape[0])]
         return np.array(masked_x).reshape((-1, total_t, len(self.cols)))
 
     def split(self, x, x_mask):
@@ -486,10 +485,6 @@ class PreProcessor:
                 # Simply take all labels from each time steps
                 original_y[lab] = x[:, :, self.cols == lab].reshape((x.shape[0], -1, 1)).copy()
             else:
-                # The labels are taken from each visit
-                # y[lab] = x[:, self.shift:, self.cols == lab].reshape((x.shape[0], -1, 1)).copy()
-                # y_mask[lab] = x_mask[:, self.shift:, self.cols == lab].reshape((x.shape[0], -1, 1)).copy()
-
                 # Fill up with nan, if not all values are overwritten it will raise an error with training
                 y[lab] = np.full((x.shape[0], x.shape[1] - self.shift, self.cons_t), np.nan)
                 y_mask[lab] = np.full((x.shape[0], x.shape[1] - self.shift, self.cons_t), np.nan)

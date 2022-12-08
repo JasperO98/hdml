@@ -102,7 +102,6 @@ class Plotter:
                                           reshape(self.data.train_weights[lab].copy()),
                                           reshape(pred[i]), reshape(self.data.y_train[lab].copy())
                                           ),
-                                    # 'original_' + lab: reshape(self.data.original_y_train[lab].copy())
                                     }
                     mask = plot_vars[d][lab][0]
                     plot_vars[d][lab][-1][~mask] = self.data.mask
@@ -113,7 +112,6 @@ class Plotter:
                                           reshape(self.data.test_weights[lab].copy()),
                                           reshape(pred[i]), reshape(self.data.y_test[lab].copy())
                                           ),
-                                    # 'original_' + lab: reshape(self.data.original_y_test[lab].copy())
                                     }
                     mask = plot_vars[d][lab][0]
                     plot_vars[d][lab][-1][~mask] = self.data.mask
@@ -218,7 +216,6 @@ class Plotter:
                 measures = self.model.evaluate(y_true[status], y_pred[status], problem, label, weights[status])
                 rows.append([name, n] + measures)
                 for m, c in zip(measures, cols):
-                    # flat_rows.append(['{} (n={})'.format(name, n), c, m])
                     flat_rows.append(['{}\n(n={})'.format(name, n), c, m])
         # Plotting
         df = pd.DataFrame(rows, columns=['status', 'n'] + cols)
@@ -262,7 +259,6 @@ class Plotter:
                 n = np.sum(mask[:, t, s].reshape(-1))
                 for c, m in zip(cols, measures):
                     values.append([n, t, '{:d} (n={:d})'.format(t + 1, n), c, m])
-        # plot
         df = pd.DataFrame(values, columns=['n', 'time step (t)', 'xlabel', 'measure', 'value'])
         # Plot
         g = sns.catplot(x="xlabel", y="value", hue="time step (t)", col='measure', data=df, kind="bar",
@@ -302,7 +298,6 @@ class Plotter:
         for ct in range(weights.shape[2]):
             if weights[:, :, ct].sum() != 0:
                 measures = self.model.evaluate(y_true[:, :, ct], y_pred[:, :, ct], problem, label, weights[:, :, ct])
-                # n = np.sum(~np.isnan(y_true[:, t, s].reshape(-1)))
                 n = np.sum(mask[:, :, ct].reshape(-1))
                 for c, m in zip(cols, measures):
                     values.append([n, ct, '{:d} (n={:d})'.format(ct + 1, n), c, m])
@@ -428,8 +423,6 @@ class Plotter:
         for t in range(self.data.timesteps + self.data.shift):
             values.append([str(t), 'Patient\'s\nDriving Status', y_true_idx[t]])
             values.append([str(t + self.data.shift), 'Model\nAssessment', y_pred_idx[t, 0]])
-            # if self.data.cons_t == 2:
-            #     values.append([str(t + self.data.shift + 1), 'Model Future\nPrediction', y_pred_idx[t, 1]])
         
         if self.data.cons_t == 2:
             values.append([str(self.data.timesteps - 1 + self.data.shift), 'Model Future\nPrediction', y_pred_idx[-1, 0]])
