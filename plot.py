@@ -426,7 +426,7 @@ class Plotter:
         cols = ['time step (t)', 'type', label]
         values = []
         for t in range(self.data.timesteps + self.data.shift):
-            values.append([str(t), 'Clinical\nAssessment', y_true_idx[t]])
+            values.append([str(t), 'Patient\'s\nDriving Status', y_true_idx[t]])
             values.append([str(t + self.data.shift), 'Model\nAssessment', y_pred_idx[t, 0]])
             # if self.data.cons_t == 2:
             #     values.append([str(t + self.data.shift + 1), 'Model Future\nPrediction', y_pred_idx[t, 1]])
@@ -445,8 +445,8 @@ class Plotter:
             self.accuracy_overlay(label, subset, fig, ax)
 
         df = pd.DataFrame(values, columns=cols)
-        truth = df.loc[df['type'] == 'Clinical\nAssessment']
-        ax.plot(truth['time step (t)'], truth[label], label='Clinical\nAssessment', marker='o')
+        truth = df.loc[df['type'] == 'Patient\'s\nDriving Status']
+        ax.plot(truth['time step (t)'], truth[label], label='Patient\'s\nDriving Status', marker='o')
                  
         pred = df.loc[df['type'] == 'Model\nAssessment']
         ax.plot(pred['time step (t)'], pred[label], label='Model\nAssessment', marker='o')

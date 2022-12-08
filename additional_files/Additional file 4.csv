@@ -1,5 +1,14 @@
-,hddiagn,ccmtrage,sxsubj,sxfamm,parentagesx,ccdepage,ccirbage,ccaptage,ccpobage,rtrddur,ccvabage,ccpsyage
-Symptom has not occurred (yet),0.0,0.94,1.15,0.0,4.88,24.69,27.66,32.23,40.57,34.24,57.2,86.06
-Symptom has occured but unknown when,0.0,0.66,6.02,8.89,13.86,0.98,1.18,1.2,1.61,8.7,0.8,0.34
-Unknown reason,0.0,0.01,0.0,0.0,5.72,0.03,0.04,0.05,0.09,0.0,0.05,0.02
-Total missing,0.0,1.61,7.18,8.89,24.46,25.7,28.88,33.47,42.27,42.94,58.06,86.41
+Age Variable,Related Variable
+hddiagn,hdcat
+parentagesx,momhd and dadhd
+sxsubj,sxsubjm
+sxfam,sxfamm
+ccmtrage,ccmtr
+ccdepage,ccdep
+ccirbage,ccirb
+ccvabage,ccvab
+ccaptage,ccapt
+ccpobage,ccpob
+ccpsyage,ccpsy
+cccogage,cccog
+rtrddur,emplnrsn
