@@ -2,7 +2,7 @@
 Install conda at: https://www.anaconda.com/products/distribution
 
 # Install Dependencies
-Open a terminal in directory create the enviroment using the yaml file:
+Open a terminal in directory and create the enviroment using the yaml file:
 ```
  conda env create --file environment.yml -n my_env
 ```
