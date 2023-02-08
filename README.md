@@ -2,7 +2,12 @@
 Install conda at: https://www.anaconda.com/products/distribution
 
 # Install Dependencies
-Open a terminal in directory and enter the following commands:
+Open a terminal in directory create the enviroment using the yaml file:
+```
+ conda env create --file environment.yml -n my_env
+```
+
+Or enter the following commands:
 
 ```
  conda config --add channels conda-forge
@@ -17,7 +22,8 @@ Open a terminal in directory and enter the following commands:
 ```
 
 # Tensorflow (GPU)
-Install via tensorflow using the commands below.
+Install tensorflow using the commands below.
+Only exporting is needed if enviroment was created using the yaml file.
 For more detailed installation instructions go to: https://www.tensorflow.org/install/pip
 
 ```
