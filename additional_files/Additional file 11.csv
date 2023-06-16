@@ -1,0 +1,153 @@
+variable,form,description,model,round,problem,score
+hxtrqfrq,MHx,Medical history of tranquilizers use frequency,Linear,2,Ordinal,1.0
+pbas10fr,PBA-S,Hallucinations frequency,Linear,2,Ordinal,0.99
+outscore,HADS-SIS,Outward irritability subscore,Linear,2,Continuous,0.99
+pbas10sv,PBA-S,Hallucinations severity,Linear,2,Ordinal,0.99
+sxsubj,Profile,Symptoms first noted by participant,RF,2,Continuous,0.99
+hxritfrq,MHx,Medical history of ritalin use frequency,Linear,2,Ordinal,0.98
+sxfam,Profile,Symptoms first noted by family,RF,2,Continuous,0.98
+hxinhfrq,MHx,Medical history of inhalants use frequency,Linear,2,Ordinal,0.98
+trnchair,Function,Could subject tranfer between chairs without help?,RF,2,Categorical,0.98
+pbas9fr,PBA-S,Delusions paranoid thinking frequency,Linear,2,Ordinal,0.98
+ccmtrage,Profile,Age when motor symptoms began,RF,2,Continuous,0.98
+toilet,Function,Could subject use toilet/commode without help?,RF,2,Categorical,0.97
+cccogage,Profile,Age when cognitive impairment first started to have an impact on daily life,RF,2,Continuous,0.97
+hxopifrq,MHx,Medical history of opium use frequency,Linear,2,Ordinal,0.97
+pbas2sv,PBA-S,Suicidal ideation severity,RF,2,Ordinal,0.96
+bed,Function,Could subject get in an out of bed without help?,RF,2,Categorical,0.95
+hxbarfrq,MHx,Medical history of barbiturates sedatives use frequency,Linear,2,Ordinal,0.95
+carehome,Function,Could subject's care still be provided at home?,RF,2,Categorical,0.95
+comb,Function,Could subject comb hair without help?,RF,2,Categorical,0.94
+walkhelp,Function,Could subject walk without help?,RF,2,Categorical,0.94
+bathe,Function,Could subject bathe himself/herself without help?,RF,2,Categorical,0.94
+feedself,Function,Could subject feed himself/herself without help?,RF,2,Categorical,0.94
+dress,Function,Could subject dress himself/herself without help?,RF,2,Categorical,0.94
+hxhalfrq,MHx,Medical history of hallucinogens use frequency,RF,2,Ordinal,0.93
+walkfall,Function,Could subject walk without falling?,RF,2,Categorical,0.93
+emplusl,Function,Could subject engage in gainful employment in his/her accustomed work?,RF,2,Categorical,0.92
+telephon,Function,Could subject use the telephone without help?,RF,2,Categorical,0.92
+chorlle,Motor,Maximal chorea LLE,Linear,2,Ordinal,0.92
+dystrle,Motor,Maximal dystonia RLE,Linear,2,Ordinal,0.92
+hxclbfrq,MHx,"Medical history of  club drugs (Ecstacy, GHB, Roofies) use frequency",RF,2,Ordinal,0.92
+walknbr,Function,Could subject walk to places in his/her neighbourhood without help?,RF,2,Categorical,0.92
+pbas9sv,PBA-S,Delusions paranoid thinking severity,Linear,2,Ordinal,0.91
+emplany,Function,Could subject engage in any kind of gainful employment?,RF,2,Categorical,0.91
+chorrue,Motor,Maximal chorea RUE,Linear,2,Ordinal,0.91
+hxpakfrq,MHx,Medical history of painkiller use frequency,Linear,2,Ordinal,0.9
+cash,Function,Could subject handle money as a purchaser in a simple cash (shop) transaction?,RF,2,Categorical,0.9
+ownmeds,Function,Could subject take his/her own medication without help?,RF,2,Categorical,0.9
+grocery,Function,Could subject shop for groceries without help?,RF,2,Categorical,0.9
+prepmeal,Function,Could participant prepare his/her own meals without help?,RF,2,Categorical,0.9
+pubtrans,Function,Could subject use public transport to get to places without help?,RF,2,Categorical,0.9
+parentagesx,Derived,Parent's age at onset,RF,2,Continuous,0.89
+laundry,Function,Could subject do his/her own laundry (wash/dry) without help?,RF,2,Categorical,0.89
+pbas2fr,PBA-S,Suicidal ideation frequency,RF,1,Ordinal,0.89
+carelevl,TFC,Care level,RF,2,Ordinal,0.89
+housewrk,Function,Could subset do his/her own housework without help?,RF,2,Categorical,0.89
+hxampfrq,MHx,Medical history of amphetamines use frequency,RF,2,Ordinal,0.88
+pbas8fr,PBA-S,Obsessive-compulsive behaviours frequency,Linear,2,Ordinal,0.88
+volunt,Function,Could subject engage in any kind of volunteer or non-gainful work?,RF,2,Categorical,0.88
+diagconf,Motor,Diagnostic confidence level (DCL),RF,2,Ordinal,0.88
+supchild,Function,Could subject supervise children without help?,RF,2,Categorical,0.87
+drive,Function,Could subject operate an automobile safely and independetly?,RF,2,Categorical,0.87
+hxcocfrq,MHx,Medical history of cocaine use frequency,RF,2,Ordinal,0.87
+fafinan,Function,Could subject manage his/her finances (monthly) without any help?,RF,2,Categorical,0.87
+sacvelv,Motor,Saccade velocity vertical,Linear,2,Ordinal,0.86
+hxherfrq,MHx,Medical history of heroin use frequency,Linear,2,Ordinal,0.85
+sacinith,Motor,Saccade initiation horizontal,RF,2,Ordinal,0.85
+pbas5sv,PBA-S,Angry or aggressive behaviour severity,RF,2,Ordinal,0.85
+pbas11fr,PBA-S,Disoriented behaviour frequency,Linear,2,Ordinal,0.84
+tobyos,Var Items I,Years of smoking,RF,2,Continuous,0.84
+dystrue,Motor,Maximal dystonia RUE,RF,2,Ordinal,0.83
+hxmarfrq,MHx,Medical history of marijuana use frequency,RF,2,Ordinal,0.83
+chores,TFC,Domestic chores,RF,2,Ordinal,0.82
+rigarmr,Motor,Right rigidity?arms,RF,2,Ordinal,0.82
+scnt1,Cognitive,Stroop colour naming test - Total correct,RF,2,Continuous,0.82
+mh,SF-12,Mental health,RF,2,Continuous,0.81
+occupatn,TFC,Occupation,RF,2,Ordinal,0.8
+ocularv,Motor,Ocular vertical,RF,2,Ordinal,0.79
+re,SF-12,Role-emotional,RF,2,Continuous,0.79
+inwscore,HADS-SIS,Inward irritability subscore,RF,2,Continuous,0.78
+pbas7fr,PBA-S,Perseverative thinking or behaviour frequency,Linear,2,Ordinal,0.78
+ampfrq,Var Items I,Amphetamines use frequency,RF,2,Ordinal,0.77
+adl,TFC,ADL,RF,2,Ordinal,0.77
+pbas1fr,PBA-S,Depressed mood frequency,Linear,2,Ordinal,0.77
+pbas4fr,PBA-S,Irritability frequency,Linear,2,Ordinal,0.76
+finances,TFC,Finances,RF,2,Ordinal,0.76
+bp,SF-12,Bodily pain,RF,2,Continuous,0.76
+sit1,Cognitive,Stroop Interference test - Total correct,RF,2,Continuous,0.75
+prosupl,Motor,Left pronate supinate?hands,RF,2,Ordinal,0.75
+fingtapr,Motor,Right finger taps,RF,2,Ordinal,0.75
+pbas6fr,PBA-S,Lack of initiative (apathy) frequency,Linear,2,Ordinal,0.74
+mcs,SF-12,Mental component,Linear,2,Continuous,0.74
+pbas3fr,PBA-S,Anxiety frequency,Linear,2,Ordinal,0.73
+hxtobyos,MHx,Medical history of years of smoking,RF,2,Continuous,0.73
+hxtobcpd,MHx,Medical history of cigarettes per day,RF,2,Continuous,0.73
+clbfrq,Var Items I,"Club drugs (Ecstacy, GHB, Roofies) use frequency",Linear,2,Ordinal,0.73
+trla1,Cognitive,Trailmaking test part A - Time to complete,RF,2,Continuous,0.73
+pcs,SF-12,Physical component,RF,2,Continuous,0.73
+sf,SF-12,Social functioning,RF,2,Continuous,0.73
+swrt1,Cognitive,Stroop word reading test - Total correct,RF,2,Continuous,0.73
+sdmt1,Cognitive,Symbol digit modality test - Total correct,RF,2,Continuous,0.72
+trlb2,Cognitive,Trailmaking test part B - Total correct,RF,2,Continuous,0.71
+trlb1,Cognitive,Trailmaking test part B - Time to complete,RF,2,Continuous,0.69
+verfct5,Cognitive,Verbal fluency test - Total correct (3 min),RF,2,Continuous,0.69
+gait,Motor,Gait,RF,2,Ordinal,0.68
+mmsetotal,MMSE,Mini Mental State Examination,RF,2,Continuous,0.68
+pbas11sv,PBA-S,Disoriented behaviour severity,RF,2,Ordinal,0.68
+dystlue,Motor,Maximal dystonia LUE,RF,2,Ordinal,0.68
+pbas8sv,PBA-S,Obsessive-compulsive behaviours severity,RF,2,Ordinal,0.67
+verflt05,Cognitive,Letter verbal fluency - Total correct,RF,2,Continuous,0.66
+trla2,Cognitive,Trailmaking test part A - Total correct,RF,2,Continuous,0.66
+dysarth,Motor,Dysarthria,RF,2,Ordinal,0.66
+dysttrnk,Motor,Maximal dystonia trunk,RF,2,Ordinal,0.64
+rp,SF-12,Role-physical,RF,2,Continuous,0.64
+dystlle,Motor,Maximal dystonia LLE,RF,2,Ordinal,0.64
+chorbol,Motor,Maximal chorea BOL,RF,2,Ordinal,0.64
+pbas5fr,PBA-S,Angry or aggressive behaviour frequency,RF,2,Ordinal,0.63
+vt,SF-12,Vitality,RF,2,Continuous,0.63
+fingtapl,Motor,Left finger taps,RF,2,Ordinal,0.62
+sacinitv,Motor,Saccade initiation vertical,RF,2,Ordinal,0.61
+chorrle,Motor,Maximal chorea RLE,RF,2,Ordinal,0.61
+anxscore,HADS-SIS,Anxiety subscore,Linear,2,Continuous,0.61
+retropls,Motor,Retropulsion pull test,RF,2,Ordinal,0.6
+ocularh,Motor,Ocular horizontal,RF,2,Ordinal,0.6
+chortrnk,Motor,Maximal chorea trunk,RF,2,Ordinal,0.58
+prosupr,Motor,Right pronate supinate?hands,RF,2,Ordinal,0.58
+tobcpd,Var Items I,Cigarettes per day,RF,2,Continuous,0.58
+tandem,Motor,Tandem walking,RF,2,Ordinal,0.57
+brady,Motor,Bradykinesiabody,RF,2,Ordinal,0.56
+sacvelh,Motor,Saccade velocity horizontal,RF,2,Ordinal,0.55
+tongue,Motor,Tongue protrusion,RF,2,Ordinal,0.54
+rigarml,Motor,Left rigidity?arms,RF,2,Ordinal,0.54
+chorface,Motor,Maximal chorea face,RF,2,Ordinal,0.54
+pbas4sv,PBA-S,Irritability severity,RF,2,Ordinal,0.54
+gh,SF-12,General health,RF,2,Continuous,0.52
+marfrq,Var Items I,Marijuana use frequency,RF,2,Ordinal,0.51
+pbas7sv,PBA-S,Perseverative thinking or behaviour severity,RF,2,Ordinal,0.5
+hads_depscore,HADS-SIS,Depression subscore,RF,2,Continuous,0.48
+chorlue,Motor,Maximal chorea LUE,RF,2,Ordinal,0.48
+pbas6sv,PBA-S,Lack of initiative (apathy) severity,RF,1,Ordinal,0.45
+cocfrq,Var Items I,Cocaine use frequency,Linear,1,Ordinal,0.45
+luria,Motor,Luria,Knn,2,Ordinal,0.44
+pbas1sv,PBA-S,Depressed mood severity,RF,2,Ordinal,0.44
+pf,SF-12,Physical functioning,RF,2,Continuous,0.44
+indepscl,Function,Subject's independence in %,RF,2,Ordinal,0.43
+pbas3sv,PBA-S,Anxiety severity,Linear,2,Ordinal,0.42
+irrscore,HADS-SIS,Irritability subscore,RF,2,Continuous,0.41
+scst1,Physiotherapy,30 second chair stand test - Number of times the participant stands in 30 seconds,RF,1,Continuous,0.37
+alcunits,Var Items I,Alcohol units per week,RF,1,Continuous,0.3
+trlb3,Cognitive,Trailmaking test part B - Total errors,RF,2,Continuous,0.21
+tug1,Physiotherapy,"Timed ""Up and Go"" test - Total time",Linear,2,Continuous,0.12
+swrt2,Cognitive,Stroop word reading test - Total errors,Linear,2,Continuous,0.11
+trla3,Cognitive,Trailmaking test part A - Total errors,Linear,2,Continuous,0.1
+sit2,Cognitive,Stroop Interference test - Total errors,Linear,2,Continuous,0.09
+verflt07,Cognitive,Letter verbal fluency - Total perseverative errors,RF,1,Continuous,0.09
+scnt3,Cognitive,Stroop colour naming test - Total self-corrected errors,Linear,2,Continuous,0.09
+verfct7,Cognitive,Verbal fluency test - Total perservative errors,Linear,2,Continuous,0.08
+scnt2,Cognitive,Stroop colour naming test - Total errors,Linear,2,Continuous,0.05
+sit3,Cognitive,Stroop Interference test - Total self-corrected errors,RF,2,Continuous,0.04
+sdmt2,Cognitive,Symbol digit modality test - Total errors,RF,2,Continuous,0.03
+verflt06,Cognitive,Letter verbal fluency - Total intrusion errors,Linear,2,Continuous,0.01
+swrt3,Cognitive,Stroop word reading test - Total self-corrected errors,RF,2,Continuous,-0.0
+verfct6,Cognitive,Verbal fluency test - Total intrusion errors,Linear,1,Continuous,-0.01

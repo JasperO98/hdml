@@ -1,154 +1,288 @@
-variable,model,round,problem,score
-hxtrqfrq,Linear,2,Ordinal,1.0
-pbas10fr,Linear,2,Ordinal,0.99
-outscore,Linear,2,Continuous,0.99
-pbas10sv,Linear,2,Ordinal,0.99
-sxsubj,RF,2,Continuous,0.99
-hxritfrq,Linear,2,Ordinal,0.98
-sxfam,RF,2,Continuous,0.98
-hxinhfrq,Linear,2,Ordinal,0.98
-trnchair,RF,2,Categorical,0.98
-pbas9fr,Linear,2,Ordinal,0.98
-ccmtrage,RF,2,Continuous,0.98
-toilet,RF,2,Categorical,0.97
-cccogage,RF,2,Continuous,0.97
-hxopifrq,Linear,2,Ordinal,0.97
-pbas2sv,RF,2,Ordinal,0.96
-bed,RF,2,Categorical,0.95
-hxbarfrq,Linear,2,Ordinal,0.95
-carehome,RF,2,Categorical,0.95
-comb,RF,2,Categorical,0.94
-walkhelp,RF,2,Categorical,0.94
-bathe,RF,2,Categorical,0.94
-feedself,RF,2,Categorical,0.94
-dress,RF,2,Categorical,0.94
-hxhalfrq,RF,2,Ordinal,0.93
-walkfall,RF,2,Categorical,0.93
-emplusl,RF,2,Categorical,0.92
-telephon,RF,2,Categorical,0.92
-chorlle,Linear,2,Ordinal,0.92
-dystrle,Linear,2,Ordinal,0.92
-hxclbfrq,RF,2,Ordinal,0.92
-walknbr,RF,2,Categorical,0.92
-pbas9sv,Linear,2,Ordinal,0.91
-emplany,RF,2,Categorical,0.91
-chorrue,Linear,2,Ordinal,0.91
-hxpakfrq,Linear,2,Ordinal,0.9
-cash,RF,2,Categorical,0.9
-ownmeds,RF,2,Categorical,0.9
-grocery,RF,2,Categorical,0.9
-prepmeal,RF,2,Categorical,0.9
-pubtrans,RF,2,Categorical,0.9
-parentagesx,RF,2,Continuous,0.89
-laundry,RF,2,Categorical,0.89
-pbas2fr,RF,1,Ordinal,0.89
-carelevl,RF,2,Ordinal,0.89
-housewrk,RF,2,Categorical,0.89
-hxampfrq,RF,2,Ordinal,0.88
-pbas8fr,Linear,2,Ordinal,0.88
-volunt,RF,2,Categorical,0.88
-diagconf,RF,2,Ordinal,0.88
-supchild,RF,2,Categorical,0.87
-drive,RF,2,Categorical,0.87
-hxcocfrq,RF,2,Ordinal,0.87
-fafinan,RF,2,Categorical,0.87
-sacvelv,Linear,2,Ordinal,0.86
-hxherfrq,Linear,2,Ordinal,0.85
-sacinith,RF,2,Ordinal,0.85
-pbas5sv,RF,2,Ordinal,0.85
-pbas11fr,Linear,2,Ordinal,0.84
-tobyos,RF,2,Continuous,0.84
-dystrue,RF,2,Ordinal,0.83
-hxmarfrq,RF,2,Ordinal,0.83
-chores,RF,2,Ordinal,0.82
-rigarmr,RF,2,Ordinal,0.82
-scnt1,RF,2,Continuous,0.82
-mh,RF,2,Continuous,0.81
-occupatn,RF,2,Ordinal,0.8
-ocularv,RF,2,Ordinal,0.79
-re,RF,2,Continuous,0.79
-inwscore,RF,2,Continuous,0.78
-pbas7fr,Linear,2,Ordinal,0.78
-ampfrq,RF,2,Ordinal,0.77
-adl,RF,2,Ordinal,0.77
-pbas1fr,Linear,2,Ordinal,0.77
-pbas4fr,Linear,2,Ordinal,0.76
-finances,RF,2,Ordinal,0.76
-bp,RF,2,Continuous,0.76
-sit1,RF,2,Continuous,0.75
-prosupl,RF,2,Ordinal,0.75
-fingtapr,RF,2,Ordinal,0.75
-pbas6fr,Linear,2,Ordinal,0.74
-mcs,Linear,2,Continuous,0.74
-pbas3fr,Linear,2,Ordinal,0.73
-hxtobyos,RF,2,Continuous,0.73
-hxtobcpd,RF,2,Continuous,0.73
-clbfrq,Linear,2,Ordinal,0.73
-trla1,RF,2,Continuous,0.73
-pcs,RF,2,Continuous,0.73
-sf,RF,2,Continuous,0.73
-swrt1,RF,2,Continuous,0.73
-sdmt1,RF,2,Continuous,0.72
-trlb2,RF,2,Continuous,0.71
-trlb1,RF,2,Continuous,0.69
-verfct5,RF,2,Continuous,0.69
-gait,RF,2,Ordinal,0.68
-mmsetotal,RF,2,Continuous,0.68
-pbas11sv,RF,2,Ordinal,0.68
-dystlue,RF,2,Ordinal,0.68
-pbas8sv,RF,2,Ordinal,0.67
-verflt05,RF,2,Continuous,0.66
-trla2,RF,2,Continuous,0.66
-dysarth,RF,2,Ordinal,0.66
-dysttrnk,RF,2,Ordinal,0.64
-rp,RF,2,Continuous,0.64
-dystlle,RF,2,Ordinal,0.64
-chorbol,RF,2,Ordinal,0.64
-pbas5fr,RF,2,Ordinal,0.63
-vt,RF,2,Continuous,0.63
-fingtapl,RF,2,Ordinal,0.62
-sacinitv,RF,2,Ordinal,0.61
-chorrle,RF,2,Ordinal,0.61
-anxscore,Linear,2,Continuous,0.61
-retropls,RF,2,Ordinal,0.6
-ocularh,RF,2,Ordinal,0.6
-chortrnk,RF,2,Ordinal,0.58
-prosupr,RF,2,Ordinal,0.58
-tobcpd,RF,2,Continuous,0.58
-tandem,RF,2,Ordinal,0.57
-brady,RF,2,Ordinal,0.56
-sacvelh,RF,2,Ordinal,0.55
-tongue,RF,2,Ordinal,0.54
-rigarml,RF,2,Ordinal,0.54
-chorface,RF,2,Ordinal,0.54
-pbas4sv,RF,2,Ordinal,0.54
-gh,RF,2,Continuous,0.52
-marfrq,RF,2,Ordinal,0.51
-pbas7sv,RF,2,Ordinal,0.5
-hads_depscore,RF,2,Continuous,0.48
-chorlue,RF,2,Ordinal,0.48
-pbas6sv,RF,1,Ordinal,0.45
-cocfrq,Linear,1,Ordinal,0.45
-luria,Knn,2,Ordinal,0.44
-pbas1sv,RF,2,Ordinal,0.44
-pf,RF,2,Continuous,0.44
-indepscl,RF,2,Ordinal,0.43
-pbas3sv,Linear,2,Ordinal,0.42
-irrscore,RF,2,Continuous,0.41
-scst1,RF,1,Continuous,0.37
-alcunits,RF,1,Continuous,0.3
-trlb3,RF,2,Continuous,0.21
-tug1,Linear,2,Continuous,0.12
-swrt2,Linear,2,Continuous,0.11
-trla3,Linear,2,Continuous,0.1
-sit2,Linear,2,Continuous,0.09
-verflt07,RF,1,Continuous,0.09
-scnt3,Linear,2,Continuous,0.09
-verfct7,Linear,2,Continuous,0.08
-scnt2,Linear,2,Continuous,0.05
-sit3,RF,2,Continuous,0.04
-sdmt2,RF,2,Continuous,0.03
-verflt06,Linear,2,Continuous,0.01
-updfh,Linear,1,Continuous,-0.0
-swrt3,RF,2,Continuous,-0.0
-verfct6,Linear,1,Continuous,-0.01
+variable,form,data type,description
+adl,TFC,ordinal,ADL
+age,Key Variables,continuous,Participant's age at visit
+alcab,Var Items I,categorical,Does the participant currently drink alcohol?
+alcunits,Var Items I,continuous,Alcohol units per week
+amp,Var Items I,categorical,Does the participant abuse amphetamines
+ampfrq,Var Items I,ordinal,Amphetamines use frequency
+anxscore,HADS-SIS,continuous,Anxiety subscore
+aptscore,PBA-S,continuous,Apathy score
+bar,Var Items I,categorical,Does the participant abuse barbiturates sedatives 
+bathe,Function,categorical,Could subject bathe himself/herself without help?
+bed,Function,categorical,Could subject get in an out of bed without help?
+bmi,Profile,continuous,BMI
+bp,SF-12,continuous,Bodily pain
+brady,Motor,ordinal,Bradykinesiabody
+cafab,Var Items I,categorical,Does the participant currently use caffeine?
+cafpd,Var Items I,categorical,"Does the participant currently drink more than 3 cups of coffee, tea and cola drinks combined per day?"
+caghigh,Profile,continuous,Larger research CAG allele determined from DNA
+caglow,Profile,continuous,Smaller research CAG allele determined from DNA
+capscore,Derived,continuous,CAG age product (age * (caghigh - 30) * 6.27)
+carehome,Function,categorical,Could subject's care still be provided at home?
+carelevl,TFC,ordinal,Care level
+cash,Function,categorical,Could subject handle money as a purchaser in a simple cash (shop) transaction?
+ccapt,Profile,categorical,Has apathy ever been a part of the participant's medical history?
+cccog,Profile,categorical,Has significant cognitive impairment or dementia ever been a part of the paricipant's medical history?
+cccogage,Profile,continuous,Age when cognitive impairment first started to have an impact on daily life
+ccdep,Profile,categorical,Has depression ever been a part of the participant's medical history?
+ccirb,Profile,categorical,Has irritability ever been a part of the participant's medical history?
+ccmtr,Profile,categorical,Has motor symptoms compatible with HD ever been a part of the participant's medical history?
+ccmtrage,Profile,continuous,Age when motor symptoms began
+ccpob,Profile,categorical,Has perseverative obsessive behaviours ever been a part of the participant's medical history?
+ccpsy,Profile,categorical,Has psychosis ever been a part of the participant's medical history?
+ccpsyfh,Profile,categorical,Does the participant have a family history of psychotic illness in a first degree relative
+ccvab,Profile,categorical,Has violant or aggressive behaviour ever been a part of the participant's medical history?
+chorbol,Motor,ordinal,Maximal chorea BOL
+chores,TFC,ordinal,Domestic chores
+chorface,Motor,ordinal,Maximal chorea face
+chorlle,Motor,ordinal,Maximal chorea LLE
+chorlue,Motor,ordinal,Maximal chorea LUE
+chorrle,Motor,ordinal,Maximal chorea RLE
+chorrue,Motor,ordinal,Maximal chorea RUE
+chortrnk,Motor,ordinal,Maximal chorea trunk
+clb,Var Items I,categorical,Does the participant abuse club drugs
+clbfrq,Var Items I,ordinal,"Club drugs (Ecstacy, GHB, Roofies) use frequency"
+coc,Var Items I,categorical,Does the participant abuse cocaine
+cocfrq,Var Items I,ordinal,Cocaine use frequency
+comb,Function,categorical,Could subject comb hair without help?
+dadhd,Profile,categorical,Father affected by Huntington's disease
+depscore,PBA-S,continuous,Depression score
+diagconf,Motor,ordinal,Diagnostic confidence level (DCL)
+dress,Function,categorical,Could subject dress himself/herself without help?
+drive,Function,categorical,Could subject operate an automobile safely and independetly?
+drugab,Var Items I,categorical,Does the participant currently use drugs
+dysarth,Motor,ordinal,Dysarthria
+dystlle,Motor,ordinal,Maximal dystonia LLE
+dystlue,Motor,ordinal,Maximal dystonia LUE
+dystrle,Motor,ordinal,Maximal dystonia RLE
+dystrue,Motor,ordinal,Maximal dystonia RUE
+dysttrnk,Motor,ordinal,Maximal dystonia trunk
+emplany,Function,categorical,Could subject engage in any kind of gainful employment?
+emplnrd,Var Items II,categorical,Retired due to (if retired)
+emplnrsn,Var Items II,categorical,Reason for not being employed
+emplusl,Function,categorical,Could subject engage in gainful employment in his/her accustomed work?
+exfscore,PBA-S,continuous,Executive function
+fafinan,Function,categorical,Could subject manage his/her finances (monthly) without any help?
+fascore,Function,continuous,Functional assessment score
+feedself,Function,categorical,Could subject feed himself/herself without help?
+fhx,Profile,categorical,Is there a family history of HD?
+finances,TFC,ordinal,Finances
+fingtapl,Motor,ordinal,Left finger taps
+fingtapr,Motor,ordinal,Right finger taps
+gait,Motor,ordinal,Gait
+gh,SF-12,continuous,General health
+grocery,Function,categorical,Could subject shop for groceries without help?
+hal,Var Items I,categorical,Does the participant abuse hallucinogens
+halfrq,Var Items I,categorical,Hallucinogens usage frequency
+handed,Profile,categorical,Handedness
+hdcat,Var Items I,categorical,"Participant HD category: pre-manifer, manifest, genotype negative, and family control"
+hddiagn,Profile,continuous,Age of clinical HD diagnosis
+height,Var Items I,continuous,Height (cm)
+her,Var Items I,categorical,Does the participant abuse heroine
+housewrk,Function,categorical,Could subset do his/her own housework without help?
+hxalcab,MHx,categorical,Medical history of alcohol problems
+hxamp,MHx,categorical,Medical history of amphetamines usage
+hxampfrq,MHx,ordinal,Medical history of amphetamines use frequency
+hxbar,MHx,categorical,Medical history of barbiturates usage
+hxbarfrq,MHx,ordinal,Medical history of barbiturates sedatives use frequency
+hxclb,MHx,categorical,Medical history of club drugs usage
+hxclbfrq,MHx,ordinal,"Medical history of  club drugs (Ecstacy, GHB, Roofies) use frequency"
+hxcoc,MHx,categorical,Medical history of cocaine usage
+hxcocfrq,MHx,ordinal,Medical history of cocaine use frequency
+hxdrugab,MHx,categorical,Medical history of drug abuse
+hxhal,MHx,categorical,Medical history of hallucinogens usage
+hxhalfrq,MHx,ordinal,Medical history of hallucinogens use frequency
+hxher,MHx,categorical,Medical history of heroine usage
+hxherfrq,MHx,ordinal,Medical history of heroin use frequency
+hxinh,MHx,categorical,Medical history of inhalant usage
+hxinhfrq,MHx,ordinal,Medical history of inhalants use frequency
+hxmar,MHx,categorical,Medical history of marijuana usage
+hxmarfrq,MHx,ordinal,Medical history of marijuana use frequency
+hxopi,MHx,categorical,Medical history of opium usage
+hxopifrq,MHx,ordinal,Medical history of opium use frequency
+hxpacky,MHx,continuous,Medical history of life time exposure to tobacco (packyears)
+hxpak,MHx,categorical,Medical history of painkillers usage
+hxpakfrq,MHx,ordinal,Medical history of painkiller use frequency
+hxrit,MHx,categorical,Medical history of ritalin  usage
+hxritfrq,MHx,ordinal,Medical history of ritalin use frequency
+hxsid,Profile,categorical,Previous suicidal ideation or attempts?
+hxtobab,MHx,categorical,Has the participant ever smoked?
+hxtobcpd,MHx,continuous,Medical history of cigarettes per day
+hxtobyos,MHx,continuous,Medical history of years of smoking
+hxtrq,MHx,categorical,Medical history of tranquilizers usage
+hxtrqfrq,MHx,ordinal,Medical history of tranquilizers use frequency
+indepscl,Function,ordinal,Subject's independence in %
+inh,Var Items I,categorical,Does the participant abuse inhalants
+int1,C-SSRS,ordinal,What is the intensity of suicidal thoughts you have?
+int2,C-SSRS,ordinal,How many times have you had these thoughts?
+int3,C-SSRS,ordinal,How long do the suicidal thoughts last?
+int4,C-SSRS,ordinal,Could/can you stop thinking about killing yourself or wanting to die if you want to?
+int5,C-SSRS,ordinal,"Are there things - anyone or anything (e.g. family, religon, pain of death) - that stopped you from wanting to die or acting on thoughts of committing suicide?"
+int6,C-SSRS,ordinal,What sort of reason did you have for thinking about wanting to die or killing yourself?
+inwscore,HADS-SIS,continuous,Inward irritability subscore
+irascore,PBA-S,continuous,Irritability aggression score
+irrscore,HADS-SIS,continuous,Irritability subscore
+isced,Var Items II,ordinal,ISCED education level
+jobclas,Var Items II,categorical,Employment status
+jobpaid,Var Items II,categorical,Work status (if employed)
+laundry,Function,categorical,Could subject do his/her own laundry (wash/dry) without help?
+luria,Motor,ordinal,Luria
+mar,Var Items I,categorical,Does the participant abuse marijuana
+marfrq,Var Items I,ordinal,Marijuana use frequency
+maristat,Var Items II,categorical,Marital status
+mcs,SF-12,continuous,Mental component
+mh,SF-12,continuous,Mental health
+mmsetotal,MMSE,continuous,Mini Mental State Examination
+momhd,Profile,categorical,Mother affected by Huntington's disease
+motscore,Motor,continuous,Motor score (TMS)
+occupatn,TFC,ordinal,Occupation
+ocularh,Motor,ordinal,Ocular horizontal
+ocularv,Motor,ordinal,Ocular vertical
+opi,Var Items I,categorical,Does the participant abuse opium
+outscore,HADS-SIS,continuous,Outward irritability subscore
+ownmeds,Function,categorical,Could subject take his/her own medication without help?
+packy,Var Items I,continuous,Life time exposure to tobacco (packyears)
+pak,Var Items I,categorical,Does the participant abuse painkillers
+parentagesx,Derived,continuous,Parent's age at onset
+pbahshd,PBA-S,categorical,Is informant a household member?
+pbainfo,PBA-S,categorical,Is informant a relative?
+pbas10fr,PBA-S,ordinal,Hallucinations frequency
+pbas10sm__1,PBA-S,categorical,Modality of hallucinations - auditory
+pbas10sm__2,PBA-S,categorical,Modality of hallucinations - visual
+pbas10sm__3,PBA-S,categorical,Modality of hallucinations - tactile
+pbas10sm__4,PBA-S,categorical,Modality of hallucinations - olfactory
+pbas10sm__5,PBA-S,categorical,Modality of hallucinations - gustatory
+pbas10sv,PBA-S,ordinal,Hallucinations severity
+pbas11fr,PBA-S,ordinal,Disoriented behaviour frequency
+pbas11sv,PBA-S,ordinal,Disoriented behaviour severity
+pbas1fr,PBA-S,ordinal,Depressed mood frequency
+pbas1sv,PBA-S,ordinal,Depressed mood severity
+pbas2fr,PBA-S,ordinal,Suicidal ideation frequency
+pbas2sv,PBA-S,ordinal,Suicidal ideation severity
+pbas3fr,PBA-S,ordinal,Anxiety frequency
+pbas3sv,PBA-S,ordinal,Anxiety severity
+pbas4fr,PBA-S,ordinal,Irritability frequency
+pbas4sv,PBA-S,ordinal,Irritability severity
+pbas5fr,PBA-S,ordinal,Angry or aggressive behaviour frequency
+pbas5sv,PBA-S,ordinal,Angry or aggressive behaviour severity
+pbas6fr,PBA-S,ordinal,Lack of initiative (apathy) frequency
+pbas6sv,PBA-S,ordinal,Lack of initiative (apathy) severity
+pbas7fr,PBA-S,ordinal,Perseverative thinking or behaviour frequency
+pbas7sv,PBA-S,ordinal,Perseverative thinking or behaviour severity
+pbas8fr,PBA-S,ordinal,Obsessive-compulsive behaviours frequency
+pbas8sv,PBA-S,ordinal,Obsessive-compulsive behaviours severity
+pbas9fr,PBA-S,ordinal,Delusions paranoid thinking frequency
+pbas9sv,PBA-S,ordinal,Delusions paranoid thinking severity
+pcs,SF-12,continuous,Physical component
+pf,SF-12,continuous,Physical functioning
+prepmeal,Function,categorical,Could participant prepare his/her own meals without help?
+prosupl,Motor,ordinal,Left pronate supinate?hands
+prosupr,Motor,ordinal,Right pronate supinate?hands
+psyscore,PBA-S,continuous,Psychosis score
+pubtrans,Function,categorical,Could subject use public transport to get to places without help?
+race,Profile,categorical,Ethnicity
+rdcwk,Var Items II,categorical,Have you had to stop or reduce work due to your health?
+re,SF-12,continuous,Role-emotional
+region,Profile,categorical,Region (latest)
+res,Var Items II,categorical,Residence
+retropls,Motor,ordinal,Retropulsion pull test
+rigarml,Motor,ordinal,Left rigidity?arms
+rigarmr,Motor,ordinal,Right rigidity?arms
+rit,Var Items I,categorical,Does the participant abuse ritalin
+rp,SF-12,continuous,Role-physical
+rtrnwk,Var Items II,categorical,Do you inted to return to work?
+sacinith,Motor,ordinal,Saccade initiation horizontal
+sacinitv,Motor,ordinal,Saccade initiation vertical
+sacvelh,Motor,ordinal,Saccade velocity horizontal
+sacvelv,Motor,ordinal,Saccade velocity vertical
+sbh1,C-SSRS,categorical,Participant attempted suicide
+sbh1n,C-SSRS,continuous,Number of suicidal attempts
+sbh2,C-SSRS,categorical,Has subject engaged in Non-Suicidal Self-Injurious Behaviour?
+sbh3,C-SSRS,categorical,Has there been a time when you started to do something to your life but someone or something stopped you before you actually did anything?
+sbh3n,C-SSRS,continuous,Number of suicidal attempts interupted by something or someone else
+sbh4,C-SSRS,categorical,Has there been a time when you started to do something to try to end your life but you stopped yourself before you actually did anything?
+sbh4n,C-SSRS,continuous,Number of suicidal attempts aborted by subject
+sbh5,C-SSRS,categorical,"Have you taken any steps towards making a suicide attempt or preparing to kill yourself (such as collecting pills, getting a gun, giving valuables away or writing a suicide note)?"
+sbh6,C-SSRS,categorical,Suicidal behaviour was present during the assessment period?
+sbh7,C-SSRS,categorical,Completed Suicide was present during the assessment period
+scnt,Cognitive,categorical,Did the participant complete the stroop colour naming test?
+scnt1,Cognitive,continuous,Stroop colour naming test - Total correct
+scnt2,Cognitive,continuous,Stroop colour naming test - Total errors
+scnt3,Cognitive,continuous,Stroop colour naming test - Total self-corrected errors
+scntnd,Cognitive,categorical,Reason why stroop colour naming test was not completed
+scoring,SF-12,categorical,Online short form health survey scoring status
+scst,Physiotherapy,categorical,Did the participant perform the 30 second chair stand test?
+scst1,Physiotherapy,continuous,30 second chair stand test - Number of times the participant stands in 30 seconds
+sdmt,Cognitive,categorical,Did the participant complete the symbol digit modality test?
+sdmt1,Cognitive,continuous,Symbol digit modality test - Total correct
+sdmt2,Cognitive,continuous,Symbol digit modality test - Total errors
+sdmtnd,Cognitive,categorical,Reason why symbol digit modality test was not completed
+seq,Key Variables,categorical,Visit index
+sex,Profile,categorical,Gender
+sf,SF-12,continuous,Social functioning
+sid1,C-SSRS,categorical,Have you wished you were dead or wished you could go to sleep and not wake up?
+sid2,C-SSRS,categorical,Have you actually had any thoughts of killing yourself?
+sid3,C-SSRS,categorical,Have you been thinking about how you might do this?
+sid4,C-SSRS,categorical,Have you had thoughts on how you might commit suicide and some intention of acting on them?
+sid5,C-SSRS,categorical,Have you started to work out or worked out the details of how to kill yourself? Do you inted to carry out this plan?
+sit,Cognitive,categorical,Did the participant complete the stroop interference test?
+sit1,Cognitive,continuous,Stroop Interference test - Total correct
+sit2,Cognitive,continuous,Stroop Interference test - Total errors
+sit3,Cognitive,continuous,Stroop Interference test - Total self-corrected errors
+ssdb,Var Items II,categorical,Do you receive social security or disability benefit?
+studyid,Key Variables,categorical,"Study ID under which the visit was done: Enroll, RegistryV3, RegistryV2, or RET"
+subjid,Key Variables,categorical,Participant's study ID (HDID)
+supchild,Function,categorical,Could subject supervise children without help?
+swrt,Cognitive,categorical,Did the participant complete the stroop word reading test?
+swrt1,Cognitive,continuous,Stroop word reading test - Total correct
+swrt2,Cognitive,continuous,Stroop word reading test - Total errors
+swrt3,Cognitive,continuous,Stroop word reading test - Total self-corrected errors
+swrtnd,Cognitive,categorical,Reason why stroop word reading test was not completed
+sxest,Profile,categorical,Can the rater estimate the symptom onset
+sxestcfd,Profile,ordinal,Rater's confidence of estimate
+sxfam,Profile,continuous,Symptoms first noted by family
+sxfamm,Profile,categorical,Initial major symptoms noted by family
+sxgs,Profile,ordinal,What is rater's best guess of how many years ago sympton onset (age at onset) took place
+sxraterm,Profile,categorical,Rater's judgement of initial major symptom
+sxreas,Profile,categorical,Reason why rater can not estimate symptom onset (age at onset)
+sxsubj,Profile,continuous,Symptoms first noted by participant
+sxsubjm,Profile,categorical,Initial major symptoms noted by participant
+tandem,Motor,ordinal,Tandem walking
+telephon,Function,categorical,Could subject use the telephone without help?
+tfcscore,TFC,continuous,Functional score
+tobab,Var Items I,categorical,Does the participant currently smoke
+tobcpd,Var Items I,continuous,Cigarettes per day
+tobyos,Var Items I,continuous,Years of smoking
+toilet,Function,categorical,Could subject use toilet/commode without help?
+tongue,Motor,ordinal,Tongue protrusion
+trl,Cognitive,categorical,Did the participant complete the trailmaking test?
+trla1,Cognitive,continuous,Trailmaking test part A - Time to complete
+trla2,Cognitive,continuous,Trailmaking test part A - Total correct
+trla3,Cognitive,continuous,Trailmaking test part A - Total errors
+trlb1,Cognitive,continuous,Trailmaking test part B - Time to complete
+trlb2,Cognitive,continuous,Trailmaking test part B - Total correct
+trlb3,Cognitive,continuous,Trailmaking test part B - Total errors
+trnchair,Function,categorical,Could subject tranfer between chairs without help?
+trq,Var Items I,categorical,Does the participant abuse tranquilizers
+tug,Physiotherapy,categorical,"Did the participant perform the timed ""Up and go"" test?"
+tug1,Physiotherapy,continuous,"Timed ""Up and Go"" test - Total time"
+updsc,Var Items II,categorical,Any changes to the following General Variable Items
+verfct,Cognitive,categorical,Did the participant complete the verbal fluency test test?
+verfct5,Cognitive,continuous,Verbal fluency test - Total correct (3 min)
+verfct6,Cognitive,continuous,Verbal fluency test - Total intrusion errors
+verfct7,Cognitive,continuous,Verbal fluency test - Total perservative errors
+verfctd,Cognitive,categorical,Verbal fluency test category
+verfctnd,Cognitive,categorical,Reason why verbal fluency test was not completed
+verflt,Cognitive,categorical,Did the participant complete the verbal fluency letter test?
+verflt05,Cognitive,continuous,Letter verbal fluency - Total correct
+verflt06,Cognitive,continuous,Letter verbal fluency - Total intrusion errors
+verflt07,Cognitive,continuous,Letter verbal fluency - Total perseverative errors
+visdy,Key Variables,continuous,Number of days relative to baseline date of Enroll-HD
+visit,Key Variables,categorical,"Visit name: Baseline, Follow-Up, Phone Contact, Unscheduled, or Retro Visit"
+visstat,Key Variables,categorical,"Visit status: plausible, reviewing, completed"
+volunt,Function,categorical,Could subject engage in any kind of volunteer or non-gainful work?
+vt,SF-12,continuous,Vitality
+walkfall,Function,categorical,Could subject walk without falling?
+walkhelp,Function,categorical,Could subject walk without help?
+walknbr,Function,categorical,Could subject walk to places in his/her neighbourhood without help?
+weight,Var Items I,continuous,Weight (Kg)

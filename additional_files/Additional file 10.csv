@@ -1,21 +1,142 @@
-layers,L2,lr,hidden_size/n_filters,train AUC,train Accuracy,train F1,test AUC,test Accuracy,test F1
-3,1e-07,1e-05,256,0.940,0.861,0.826,0.929,0.852,0.819
-3,1e-07,1e-05,128,0.941,0.863,0.829,0.929,0.851,0.818
-3,1e-07,1e-05,128,0.941,0.863,0.829,0.929,0.851,0.818
-3,1e-05,1e-05,128,0.941,0.863,0.829,0.929,0.851,0.818
-3,1e-05,1e-05,128,0.941,0.863,0.829,0.929,0.851,0.818
-3,1e-05,1e-05,256,0.941,0.863,0.829,0.929,0.851,0.817
-3,1e-07,1e-05,512,0.940,0.862,0.828,0.928,0.852,0.819
-5,1e-07,1e-05,256,0.939,0.862,0.827,0.928,0.850,0.817
-3,1e-05,1e-05,512,0.943,0.865,0.831,0.928,0.850,0.816
-5,1e-07,1e-05,512,0.942,0.863,0.829,0.927,0.851,0.817
-5,1e-05,1e-05,512,0.944,0.868,0.833,0.927,0.850,0.815
-5,1e-05,1e-05,128,0.939,0.861,0.826,0.927,0.849,0.815
-5,1e-07,1e-05,128,0.939,0.861,0.827,0.927,0.848,0.815
-5,1e-05,1e-05,256,0.943,0.866,0.832,0.927,0.847,0.813
-3,1e-03,1e-05,128,0.941,0.864,0.831,0.926,0.848,0.815
-5,1e-03,1e-05,128,0.941,0.865,0.830,0.926,0.848,0.814
-3,1e-03,1e-05,256,0.940,0.862,0.828,0.925,0.850,0.817
-5,1e-03,1e-05,256,0.942,0.865,0.832,0.925,0.849,0.817
-5,1e-03,1e-05,512,0.942,0.865,0.832,0.924,0.848,0.816
-3,1e-03,1e-05,512,0.941,0.863,0.827,0.924,0.849,0.815
+variable,form,data type,description,input AAO model,input drive model
+caghigh,Profile,continuous,Larger research CAG allele determined from DNA,TRUE,TRUE
+caglow,Profile,continuous,Smaller research CAG allele determined from DNA,TRUE,TRUE
+dadhd,Profile,categorical,Father affected by Huntington's disease,TRUE,TRUE
+fhx,Profile,categorical,Is there a family history of HD?,TRUE,TRUE
+momhd,Profile,categorical,Mother affected by Huntington's disease,TRUE,TRUE
+parentagesx,Derived,continuous,Parent's age at onset,TRUE,TRUE
+sex,Profile,categorical,Gender,TRUE,TRUE
+adl,TFC,ordinal,ADL,FALSE,TRUE
+age,Key Variables,continuous,Participant's age at visit,FALSE,TRUE
+alcunits,Var Items I,continuous,Alcohol units per week,FALSE,TRUE
+anxscore,HADS-SIS,continuous,Anxiety subscore,FALSE,TRUE
+aptscore,PBA-S,continuous,Apathy score,FALSE,TRUE
+bathe,Function,categorical,Could subject bathe himself/herself without help?,FALSE,TRUE
+bed,Function,categorical,Could subject get in an out of bed without help?,FALSE,TRUE
+bmi,Profile,continuous,BMI,FALSE,TRUE
+bp,SF-12,continuous,Bodily pain,FALSE,TRUE
+brady,Motor,ordinal,Bradykinesiabody,FALSE,TRUE
+cafab,Var Items I,categorical,Does the participant currently use caffeine?,FALSE,TRUE
+cafpd,Var Items I,categorical,"Does the participant currently drink more than 3 cups of coffee, tea and cola drinks combined per day?",FALSE,TRUE
+capscore,Derived,continuous,CAG age product (age * (caghigh - 30) * 6.27),FALSE,TRUE
+carehome,Function,categorical,Could subject's care still be provided at home?,FALSE,TRUE
+carelevl,TFC,ordinal,Care level,FALSE,TRUE
+cash,Function,categorical,Could subject handle money as a purchaser in a simple cash (shop) transaction?,FALSE,TRUE
+ccapt,Profile,categorical,Has apathy ever been a part of the participant's medical history?,FALSE,TRUE
+cccog,Profile,categorical,Has significant cognitive impairment or dementia ever been a part of the paricipant's medical history?,FALSE,TRUE
+cccogage,Profile,continuous,Age when cognitive impairment first started to have an impact on daily life,FALSE,TRUE
+ccdep,Profile,categorical,Has depression ever been a part of the participant's medical history?,FALSE,TRUE
+ccirb,Profile,categorical,Has irritability ever been a part of the participant's medical history?,FALSE,TRUE
+ccmtr,Profile,categorical,Has motor symptoms compatible with HD ever been a part of the participant's medical history?,FALSE,TRUE
+ccmtrage,Profile,continuous,Age when motor symptoms began,FALSE,TRUE
+ccpob,Profile,categorical,Has perseverative obsessive behaviours ever been a part of the participant's medical history?,FALSE,TRUE
+ccpsy,Profile,categorical,Has psychosis ever been a part of the participant's medical history?,FALSE,TRUE
+ccvab,Profile,categorical,Has violant or aggressive behaviour ever been a part of the participant's medical history?,FALSE,TRUE
+chorbol,Motor,ordinal,Maximal chorea BOL,FALSE,TRUE
+chores,TFC,ordinal,Domestic chores,FALSE,TRUE
+chorface,Motor,ordinal,Maximal chorea face,FALSE,TRUE
+chorlle,Motor,ordinal,Maximal chorea LLE,FALSE,TRUE
+chorlue,Motor,ordinal,Maximal chorea LUE,FALSE,TRUE
+chorrle,Motor,ordinal,Maximal chorea RLE,FALSE,TRUE
+chorrue,Motor,ordinal,Maximal chorea RUE,FALSE,TRUE
+chortrnk,Motor,ordinal,Maximal chorea trunk,FALSE,TRUE
+comb,Function,categorical,Could subject comb hair without help?,FALSE,TRUE
+depscore,PBA-S,continuous,Depression score,FALSE,TRUE
+diagconf,Motor,ordinal,Diagnostic confidence level (DCL),FALSE,TRUE
+dress,Function,categorical,Could subject dress himself/herself without help?,FALSE,TRUE
+drive,Function,categorical,Could subject operate an automobile safely and independetly?,FALSE,TRUE
+drugab,Var Items I,categorical,Does the participant currently use drugs,FALSE,TRUE
+dysarth,Motor,ordinal,Dysarthria,FALSE,TRUE
+dystlle,Motor,ordinal,Maximal dystonia LLE,FALSE,TRUE
+dystlue,Motor,ordinal,Maximal dystonia LUE,FALSE,TRUE
+dystrle,Motor,ordinal,Maximal dystonia RLE,FALSE,TRUE
+dystrue,Motor,ordinal,Maximal dystonia RUE,FALSE,TRUE
+dysttrnk,Motor,ordinal,Maximal dystonia trunk,FALSE,TRUE
+emplany,Function,categorical,Could subject engage in any kind of gainful employment?,FALSE,TRUE
+emplnrd,Var Items II,categorical,Retired due to (if retired),FALSE,TRUE
+emplusl,Function,categorical,Could subject engage in gainful employment in his/her accustomed work?,FALSE,TRUE
+exfscore,PBA-S,continuous,Executive function,FALSE,TRUE
+fafinan,Function,categorical,Could subject manage his/her finances (monthly) without any help?,FALSE,TRUE
+feedself,Function,categorical,Could subject feed himself/herself without help?,FALSE,TRUE
+finances,TFC,ordinal,Finances,FALSE,TRUE
+fingtapl,Motor,ordinal,Left finger taps,FALSE,TRUE
+fingtapr,Motor,ordinal,Right finger taps,FALSE,TRUE
+gait,Motor,ordinal,Gait,FALSE,TRUE
+gh,SF-12,continuous,General health,FALSE,TRUE
+grocery,Function,categorical,Could subject shop for groceries without help?,FALSE,TRUE
+hads_depscore,HADS-SIS,continuous,Depression subscore,FALSE,TRUE
+handed,Profile,categorical,Handedness,FALSE,TRUE
+hddiagn,Profile,continuous,Age of clinical HD diagnosis,FALSE,TRUE
+housewrk,Function,categorical,Could subset do his/her own housework without help?,FALSE,TRUE
+hxalcab,MHx,categorical,Medical history of alcohol problems,FALSE,TRUE
+hxdrugab,MHx,categorical,Medical history of drug abuse,FALSE,TRUE
+hxpacky,MHx,continuous,Medical history of life time exposure to tobacco (packyears),FALSE,TRUE
+hxsid,Profile,categorical,Previous suicidal ideation or attempts?,FALSE,TRUE
+hxtobab,MHx,categorical,Has the participant ever smoked?,FALSE,TRUE
+hxtobcpd,MHx,continuous,Medical history of cigarettes per day,FALSE,TRUE
+hxtobyos,MHx,continuous,Medical history of years of smoking,FALSE,TRUE
+indepscl,Function,ordinal,Subject's independence in %,FALSE,TRUE
+inwscore,HADS-SIS,continuous,Inward irritability subscore,FALSE,TRUE
+irascore,PBA-S,continuous,Irritability aggression score,FALSE,TRUE
+irrscore,HADS-SIS,continuous,Irritability subscore,FALSE,TRUE
+jobpaid,Var Items II,categorical,Work status (if employed),FALSE,TRUE
+laundry,Function,categorical,Could subject do his/her own laundry (wash/dry) without help?,FALSE,TRUE
+luria,Motor,ordinal,Luria,FALSE,TRUE
+mcs,SF-12,continuous,Mental component,FALSE,TRUE
+mh,SF-12,continuous,Mental health,FALSE,TRUE
+mmsetotal,MMSE,continuous,Mini Mental State Examination,FALSE,TRUE
+motscore,Motor,continuous,Motor score (TMS),FALSE,TRUE
+occupatn,TFC,ordinal,Occupation,FALSE,TRUE
+ocularh,Motor,ordinal,Ocular horizontal,FALSE,TRUE
+ocularv,Motor,ordinal,Ocular vertical,FALSE,TRUE
+outscore,HADS-SIS,continuous,Outward irritability subscore,FALSE,TRUE
+ownmeds,Function,categorical,Could subject take his/her own medication without help?,FALSE,TRUE
+packy,Var Items I,continuous,Life time exposure to tobacco (packyears),FALSE,TRUE
+pcs,SF-12,continuous,Physical component,FALSE,TRUE
+pf,SF-12,continuous,Physical functioning,FALSE,TRUE
+prepmeal,Function,categorical,Could participant prepare his/her own meals without help?,FALSE,TRUE
+prosupl,Motor,ordinal,Left pronate supinate?hands,FALSE,TRUE
+prosupr,Motor,ordinal,Right pronate supinate?hands,FALSE,TRUE
+psyscore,PBA-S,continuous,Psychosis score,FALSE,TRUE
+pubtrans,Function,categorical,Could subject use public transport to get to places without help?,FALSE,TRUE
+re,SF-12,continuous,Role-emotional,FALSE,TRUE
+retropls,Motor,ordinal,Retropulsion pull test,FALSE,TRUE
+rigarml,Motor,ordinal,Left rigidity?arms,FALSE,TRUE
+rigarmr,Motor,ordinal,Right rigidity?arms,FALSE,TRUE
+rp,SF-12,continuous,Role-physical,FALSE,TRUE
+rtrnwk,Var Items II,categorical,Do you inted to return to work?,FALSE,TRUE
+sacinith,Motor,ordinal,Saccade initiation horizontal,FALSE,TRUE
+sacinitv,Motor,ordinal,Saccade initiation vertical,FALSE,TRUE
+sacvelh,Motor,ordinal,Saccade velocity horizontal,FALSE,TRUE
+sacvelv,Motor,ordinal,Saccade velocity vertical,FALSE,TRUE
+scnt1,Cognitive,continuous,Stroop colour naming test - Total correct,FALSE,TRUE
+scst1,Physiotherapy,continuous,30 second chair stand test - Number of times the participant stands in 30 seconds,FALSE,TRUE
+sdmt1,Cognitive,continuous,Symbol digit modality test - Total correct,FALSE,TRUE
+sf,SF-12,continuous,Social functioning,FALSE,TRUE
+sit1,Cognitive,continuous,Stroop Interference test - Total correct,FALSE,TRUE
+ssdb,Var Items II,categorical,Do you receive social security or disability benefit?,FALSE,TRUE
+supchild,Function,categorical,Could subject supervise children without help?,FALSE,TRUE
+swrt1,Cognitive,continuous,Stroop word reading test - Total correct,FALSE,TRUE
+sxfam,Profile,continuous,Symptoms first noted by family,FALSE,TRUE
+sxfamm,Profile,categorical,Initial major symptoms noted by family,FALSE,TRUE
+sxraterm,Profile,categorical,Rater's judgement of initial major symptom,FALSE,TRUE
+sxsubj,Profile,continuous,Symptoms first noted by participant,FALSE,TRUE
+sxsubjm,Profile,categorical,Initial major symptoms noted by participant,FALSE,TRUE
+tandem,Motor,ordinal,Tandem walking,FALSE,TRUE
+telephon,Function,categorical,Could subject use the telephone without help?,FALSE,TRUE
+tfcscore,TFC,continuous,Functional score,FALSE,TRUE
+tobcpd,Var Items I,continuous,Cigarettes per day,FALSE,TRUE
+tobyos,Var Items I,continuous,Years of smoking,FALSE,TRUE
+toilet,Function,categorical,Could subject use toilet/commode without help?,FALSE,TRUE
+tongue,Motor,ordinal,Tongue protrusion,FALSE,TRUE
+trla1,Cognitive,continuous,Trailmaking test part A - Time to complete,FALSE,TRUE
+trlb1,Cognitive,continuous,Trailmaking test part B - Time to complete,FALSE,TRUE
+trnchair,Function,categorical,Could subject tranfer between chairs without help?,FALSE,TRUE
+tug1,Physiotherapy,continuous,"Timed ""Up and Go"" test - Total time",FALSE,TRUE
+verfct5,Cognitive,continuous,Verbal fluency test - Total correct (3 min),FALSE,TRUE
+verflt05,Cognitive,continuous,Letter verbal fluency - Total correct,FALSE,TRUE
+volunt,Function,categorical,Could subject engage in any kind of volunteer or non-gainful work?,FALSE,TRUE
+vt,SF-12,continuous,Vitality,FALSE,TRUE
+walkfall,Function,categorical,Could subject walk without falling?,FALSE,TRUE
+walkhelp,Function,categorical,Could subject walk without help?,FALSE,TRUE
+walknbr,Function,categorical,Could subject walk to places in his/her neighbourhood without help?,FALSE,TRUE
